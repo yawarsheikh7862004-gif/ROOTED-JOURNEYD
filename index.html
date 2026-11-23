@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <!-- Hero Right Safari Quote Request Form -->
+                <!-- Hero Right Safari Quote Request Form (Advance + Current) -->
                 <div id="booking-form" class="lg:col-span-5">
                     <div class="bg-parchment-50 text-canopy-900 rounded-3xl p-6 sm:p-7 shadow-2xl border border-parchment-300">
                         <div class="flex items-center justify-between border-b border-parchment-200 pb-4 mb-4">
@@ -221,11 +221,11 @@
                             <span class="bg-sage-100 text-canopy-900 text-xs font-bold px-3 py-1 rounded-full">Enquiry Only</span>
                         </div>
 
-                        <!-- Upfront Price Summary Inside Form Box -->
-                        <div class="bg-amber-light border border-amber-tiger/30 rounded-xl p-3 mb-4 text-xs text-canopy-900 space-y-1">
-                            <p class="font-bold text-canopy-900">Indicative Advance Rates (Per Seat):</p>
-                            <p>• <strong>Canter:</strong> Indian ₹1,250 <em>(approx. ₹971 base + ₹279 fee)</em> | Foreigner ₹2,700 <em>(approx. ₹2,450 base + ₹250 fee)</em></p>
-                            <p>• <strong>Gypsy:</strong> Indian ₹2,450 <em>(approx. ₹1,627 base + ₹823 fee)</em> | Foreigner ₹3,900 <em>(approx. ₹3,050 base + ₹850 fee)</em></p>
+                        <!-- Upfront Price Summary Inside Form Box (Advance + Current) -->
+                        <div id="formRateSummary" class="bg-amber-light border border-amber-tiger/30 rounded-xl p-3 mb-4 text-xs text-canopy-900 space-y-1.5">
+                            <p class="font-bold text-canopy-900">Indicative Rates Per Seat (Approx. Base + Agency Fee):</p>
+                            <p><span class="font-semibold">Advance:</span> Canter Ind ₹1,250 (<em>~₹971 + ₹279</em>) / For ₹2,700 (<em>~₹2,450 + ₹250</em>) • Gypsy Ind ₹2,450 (<em>~₹1,627 + ₹823</em>) / For ₹3,900 (<em>~₹3,050 + ₹850</em>)</p>
+                            <p><span class="font-semibold">Current:</span> Canter Ind ₹1,500 (<em>~₹971 + ₹529</em>) / For ₹2,950 (<em>~₹2,450 + ₹500</em>) • Gypsy Ind ₹2,500 (<em>~₹1,627 + ₹873</em>) / For ₹4,550 (<em>~₹3,050 + ₹1,500</em>)</p>
                         </div>
 
                         <p class="text-xs text-stone-600 mb-3">Submitting this form sends a free enquiry only. No payment is taken here, and no permit or zone is guaranteed until issued by the Rajasthan Forest Department.</p>
@@ -233,9 +233,19 @@
                         <form id="safariBookingForm" class="space-y-3.5" novalidate>
                             <div class="grid sm:grid-cols-2 gap-3.5">
                                 <div>
+                                    <label for="bookingQuota" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Booking Quota <span class="text-red-600">*</span></label>
+                                    <select id="bookingQuota" name="bookingQuota" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
+                                        <option value="Advance Booking" selected>Advance Booking</option>
+                                        <option value="Current Booking">Current Booking</option>
+                                    </select>
+                                </div>
+                                <div>
                                     <label for="safariDate" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Date of Safari <span class="text-red-600">*</span></label>
                                     <input type="date" id="safariDate" name="safariDate" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
                                 </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="safariType" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Select Safari <span class="text-red-600">*</span></label>
                                     <select id="safariType" name="safariType" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
@@ -246,12 +256,18 @@
                                         <option value="Canter Exclusive (20-Seater)">Canter Exclusive (20-Seater)</option>
                                     </select>
                                 </div>
+                                <div>
+                                    <label id="bookingCountLabel" for="safariCount" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Seats / Vehicles <span class="text-red-600">*</span></label>
+                                    <select id="safariCount" name="safariCount" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm font-semibold text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
+                                        <option value="1" selected>1 Seat / Vehicle</option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <div class="grid sm:grid-cols-3 gap-3.5">
+                            <div class="grid sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="safariZone" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Select Zone <span class="text-red-600">*</span></label>
-                                    <select id="safariZone" name="safariZone" required class="w-full rounded-xl border border-parchment-300 bg-white px-3 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
+                                    <select id="safariZone" name="safariZone" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
                                         <option value="">Select Zone</option>
                                         <option value="Zone 1/2/3/4/5/6">Zone 1/2/3/4/5/6</option>
                                         <option value="Zone 7/8/9/10">Zone 7/8/9/10</option>
@@ -260,16 +276,10 @@
                                 </div>
                                 <div>
                                     <label for="safariShift" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Select Shift <span class="text-red-600">*</span></label>
-                                    <select id="safariShift" name="safariShift" required class="w-full rounded-xl border border-parchment-300 bg-white px-3 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
+                                    <select id="safariShift" name="safariShift" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
                                         <option value="">Select Shift</option>
                                         <option value="Morning">Morning Shift</option>
                                         <option value="Afternoon">Afternoon Shift</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label id="bookingCountLabel" for="safariCount" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Seats / Vehicles <span class="text-red-600">*</span></label>
-                                    <select id="safariCount" name="safariCount" required class="w-full rounded-xl border border-parchment-300 bg-white px-3 py-2.5 text-sm font-semibold text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
-                                        <option value="1" selected>1 Seat / Vehicle</option>
                                     </select>
                                 </div>
                             </div>
@@ -1007,6 +1017,7 @@
         const bookingFeedback = document.getElementById('bookingFeedback');
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const quota = document.getElementById('bookingQuota').value.trim();
             const date = document.getElementById('safariDate').value.trim();
             const safari = document.getElementById('safariType').value.trim();
             const countVal = parseInt(document.getElementById('safariCount').value, 10) || 1;
@@ -1017,7 +1028,7 @@
             const phone = document.getElementById('guestPhone').value.trim();
             const email = document.getElementById('guestEmail').value.trim();
 
-            if (!date || !safari || !zone || !shift || !name || !phone || !email) {
+            if (!quota || !date || !safari || !zone || !shift || !name || !phone || !email) {
                 bookingFeedback.className = 'rounded-xl p-3 text-xs font-semibold bg-red-50 text-red-700 border border-red-200';
                 bookingFeedback.textContent = 'Please fill in all required (*) fields.';
                 bookingFeedback.classList.remove('hidden');
@@ -1035,12 +1046,14 @@
                 `- Name: ${name}`,
                 `- Phone: ${code} ${phone}`,
                 `- Email: ${email}`,
+                `- Booking Quota: ${quota}`,
                 `- Date of Safari: ${date}`,
                 `- Safari Type: ${safari}`,
                 `- Quantity: ${unitText}`,
                 `- Zone Preference: ${zone}`,
                 `- Shift: ${shift}`
-            ].join('\n');
+            ].join('
+');
 
             bookingFeedback.className = 'rounded-xl p-3 text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200';
             bookingFeedback.textContent = 'Opening WhatsApp with your quote request...';
@@ -1134,7 +1147,7 @@
             7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200' },
             8: { title: 'Zone 8 – Balas', group: 'Zone 7/8/9/10', spots: 'Balas, Aravalli Ridges, Dry Deciduous Forest', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Deer', desc: 'Marked by undulating hills and dry deciduous forest cover.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200' },
             9: { title: 'Zone 9 – Qualji', group: 'Zone 7/8/9/10', spots: 'Qualji, Banas River Corridor, Riverine Forest', wildlife: 'Royal Bengal Tiger, Striped Hyena, Indian Fox, Birds', desc: 'Stretches toward the Banas riverine belt with open terrain and ravines.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' },
-            10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' }
+            10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200' }
         };
 
         let activeZoneNumber = '1';
@@ -1190,7 +1203,8 @@
                 contactFeedback.classList.remove('hidden');
                 return;
             }
-            const msg = ['Hello Rooted Journeys (rootedjourneys.online),', 'New website inquiry:', `- Email: ${email}`, phone ? `- Phone: ${phone}` : null, comment ? `- Message: ${comment}` : null].filter(Boolean).join('\n');
+            const msg = ['Hello Rooted Journeys (rootedjourneys.online),', 'New website inquiry:', `- Email: ${email}`, phone ? `- Phone: ${phone}` : null, comment ? `- Message: ${comment}` : null].filter(Boolean).join('
+');
             contactFeedback.className = 'rounded-xl p-3 text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200';
             contactFeedback.textContent = 'Opening WhatsApp with your message...';
             contactFeedback.classList.remove('hidden');
