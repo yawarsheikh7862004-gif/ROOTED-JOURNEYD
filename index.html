@@ -1405,15 +1405,17 @@
 
             // Sharing = price per guest seat. Exclusive = price per complete vehicle.
             const isSharing = option.endsWith('_sharing');
+            // Sharing is priced per guest seat; exclusive is priced per complete vehicle.
+            // Keep exclusive quantity fixed at exactly one vehicle.
             const maxUnits = isSharing
                 ? (option.startsWith('gypsy') ? 6 : 20)
-                : (option.startsWith('gypsy') ? 20 : 20);
+                : 1;
             const previousUnits = Number.parseInt(calcUnits.value, 10) || 1;
             const units = Math.min(maxUnits, Math.max(1, previousUnits));
 
             calcUnitsLabel.textContent = isSharing
                 ? 'Number of Guests / Seats'
-                : 'Number of Exclusive Vehicles';
+                : 'Exclusive Vehicle (Fixed: 1)';
 
             // Rebuild quantity choices whenever the selected safari changes.
             if (calcUnits.options.length !== maxUnits) {
@@ -1426,6 +1428,8 @@
                 }
             }
             calcUnits.value = String(units);
+            // Prevent changing the exclusive vehicle count; its tariff is per full vehicle.
+            calcUnits.disabled = !isSharing;
 
             const unitRate = Number(item[nat]);
             const total = unitRate * units;
