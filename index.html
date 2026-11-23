@@ -7,7 +7,7 @@
     <meta name="description" content="Rooted Journeys (rootedjourneys.online) - Private travel agency assisting with Ranthambore National Park Gypsy and Canter safari bookings, Zones 1-10 guide, tariff rates, and Pinterest-inspired Ranthambore tiger photos. Contact +91-9216432486.">
 
     <!-- Inline SVG Circular Favicon matching Rooted Journeys Emblem -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231E3524' stroke='%23C47335' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='22' fill='%23F4F1EA'/%3E%3Cpath d='M16 38c4-5 10-7 17-7 6 0 11 2 15 6l-3 5c-4-3-8-4-12-4-5 0-9 2-12 5z' fill='%23C47335'/%3E%3Cpath d='M22 33l2 5M29 31l1 6M36 31l1 6' stroke='%231E3524' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="rooted-journeys-logo.png">
 
     <!-- Google Fonts: Inter & Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,7 +137,7 @@
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <!-- Brand Logo + Name -->
                 <a href="#hero" class="flex items-center gap-3 group shrink-0">
-                    <img src="Gemini_Generated_Image_e4bu6ee4bu6ee4bu_3.png"
+                    <img src="rooted-journeys-logo.png"
                          alt="Rooted Journeys Logo"
                          onerror="this.onerror=null;this.src='https://placehold.co/120x120/1E3524/E3A857?text=RJ';"
                          class="w-11 h-11 lg:w-13 lg:h-13 rounded-full object-cover logo-ring group-hover:scale-105 transition-transform duration-300">
@@ -219,7 +219,7 @@
                 <!-- Hero Left Content -->
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-canopy-900/90 border border-amber-gold/40 rounded-full pr-4 pl-1.5 py-1.5 backdrop-blur-sm">
-                        <img src="Gemini_Generated_Image_e4bu6ee4bu6ee4bu_3.png"
+                        <img src="rooted-journeys-logo.png"
                              alt="Rooted Journeys Circular Emblem"
                              onerror="this.onerror=null;this.src='https://placehold.co/64x64/1E3524/E3A857?text=RJ';"
                              class="w-9 h-9 rounded-full object-cover border border-amber-gold">
@@ -433,7 +433,7 @@
                                         <option value="+598">Uruguay +598</option>
                                         <option value="+84">Vietnam +84</option>
                                     </select>
-                                    <input type="tel" id="guestPhone" name="guestPhone" required placeholder="9216432486"
+                                    <input type="tel" id="guestPhone" name="guestPhone" required placeholder="9876543210"
                                            class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
                                 </div>
                             </div>
@@ -708,9 +708,16 @@
                     </div>
 
                     <div>
-                        <label for="calcUnits" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1.5">Seats / Vehicles</label>
-                        <input type="number" id="calcUnits" min="1" max="20" value="1"
-                               class="w-full rounded-xl border border-parchment-300 bg-parchment-50 px-3 py-2.5 text-sm font-bold text-canopy-900">
+                        <label for="calcUnits" id="calcUnitsLabel" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1.5">Number of Guests / Vehicles</label>
+                        <select id="calcUnits" aria-label="Select number of guests or vehicles"
+                                class="w-full rounded-xl border border-parchment-300 bg-parchment-50 px-3 py-2.5 text-sm font-bold text-canopy-900">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
                     </div>
 
                     <div class="bg-canopy-900 text-white rounded-2xl p-4 flex flex-col justify-between">
@@ -1065,7 +1072,7 @@
             <!-- About Rooted Journeys + Dedicated Disclaimer -->
             <div class="lg:col-span-6 space-y-5">
                 <div class="flex items-center gap-4">
-                    <img src="Gemini_Generated_Image_e4bu6ee4bu6ee4bu_3.png"
+                    <img src="rooted-journeys-logo.png"
                          alt="Rooted Journeys Emblem"
                          onerror="this.onerror=null;this.src='https://placehold.co/96x96/1E3524/E3A857?text=RJ';"
                          class="w-16 h-16 rounded-full object-cover logo-ring shrink-0">
@@ -1183,7 +1190,7 @@
                 <!-- Brand & Registration -->
                 <div class="lg:col-span-2 space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="Gemini_Generated_Image_e4bu6ee4bu6ee4bu_3.png"
+                        <img src="rooted-journeys-logo.png"
                              alt="Rooted Journeys Logo"
                              onerror="this.onerror=null;this.src='https://placehold.co/96x96/1E3524/E3A857?text=RJ';"
                              class="w-12 h-12 rounded-full object-cover logo-ring">
@@ -1387,30 +1394,59 @@
         const calcSummaryText = document.getElementById('calcSummaryText');
         const calcWhatsAppBtn = document.getElementById('calcWhatsAppBtn');
 
+        const calcUnitsLabel = document.getElementById('calcUnitsLabel');
+
         function updateEstimator() {
             const quota = calcQuota.value;
             const option = calcOption.value;
             const nat = calcNationality.value;
-            const units = Math.max(1, Math.min(20, parseInt(calcUnits.value, 10) || 1));
-            calcUnits.value = units;
+            const item = rateTable[quota] && rateTable[quota][option];
+            if (!item) return;
 
-            const item = rateTable[quota][option];
-            const unitRate = item[nat];
+            // Sharing = price per guest seat. Exclusive = price per complete vehicle.
+            const isSharing = option.endsWith('_sharing');
+            const maxUnits = isSharing
+                ? (option.startsWith('gypsy') ? 6 : 20)
+                : (option.startsWith('gypsy') ? 20 : 20);
+            const previousUnits = Number.parseInt(calcUnits.value, 10) || 1;
+            const units = Math.min(maxUnits, Math.max(1, previousUnits));
+
+            calcUnitsLabel.textContent = isSharing
+                ? 'Number of Guests / Seats'
+                : 'Number of Exclusive Vehicles';
+
+            // Rebuild quantity choices whenever the selected safari changes.
+            if (calcUnits.options.length !== maxUnits) {
+                calcUnits.replaceChildren();
+                for (let i = 1; i <= maxUnits; i++) {
+                    const optionElement = document.createElement('option');
+                    optionElement.value = String(i);
+                    optionElement.textContent = String(i);
+                    calcUnits.appendChild(optionElement);
+                }
+            }
+            calcUnits.value = String(units);
+
+            const unitRate = Number(item[nat]);
             const total = unitRate * units;
+            const formattedRate = '₹' + unitRate.toLocaleString('en-IN');
             const formattedTotal = '₹' + total.toLocaleString('en-IN');
             const quotaLabel = quota === 'advance' ? 'Advance Booking' : 'Current / Tatkal Booking';
             const natLabel = nat === 'indian' ? 'Indian' : 'Foreigner';
+            const quantityLabel = isSharing
+                ? `${units} guest seat${units === 1 ? '' : 's'}`
+                : `${units} exclusive vehicle${units === 1 ? '' : 's'}`;
 
             calcTotal.textContent = formattedTotal;
-            calcSummaryText.innerHTML = `${units} × ${item.label} (${quotaLabel}, ${natLabel}) = <strong>${formattedTotal}</strong>`;
+            calcSummaryText.innerHTML =
+                `${units} × ${item.label} (${quotaLabel}, ${natLabel}; ${formattedRate} each) = <strong>${formattedTotal}</strong>`;
 
-            const waText = `Hello Rooted Journeys, please confirm availability & rate for ${units} × ${item.label} (${quotaLabel}, ${natLabel}, Est. ${formattedTotal}).`;
+            const waText = `Hello Rooted Journeys, please confirm availability & rate for ${quantityLabel}: ${units} × ${item.label} (${quotaLabel}, ${natLabel}; ${formattedRate} each; estimated total ${formattedTotal}).`;
             calcWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
         }
 
         [calcQuota, calcOption, calcNationality, calcUnits].forEach((el) => {
             el.addEventListener('change', updateEstimator);
-            el.addEventListener('input', updateEstimator);
         });
         updateEstimator();
 
