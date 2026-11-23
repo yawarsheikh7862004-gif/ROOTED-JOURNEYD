@@ -623,9 +623,9 @@
                     <div class="bg-canopy-900 text-white px-6 py-4 flex items-center justify-between">
                         <div>
                             <h3 class="font-serif text-xl font-bold">Advance Booking</h3>
-                            <p class="text-xs text-parchment-200">Subject to Forest Dept. Availability • All-Inclusive</p>
+                            <p class="text-xs text-parchment-200">Subject to official availability • Quoted agency prices</p>
                         </div>
-                        <span class="bg-amber-tiger text-white text-xs font-bold px-3 py-1 rounded-full">No Hidden Fees</span>
+                        <span class="bg-amber-tiger text-white text-xs font-bold px-3 py-1 rounded-full">Charges Disclosed</span>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse text-sm">
@@ -662,14 +662,14 @@
                     </div>
                 </div>
 
-                <!-- Current Booking (Tatkal subject to separate eligibility) Table -->
+                <!-- Current Booking Table -->
                 <div class="bg-white rounded-3xl border border-parchment-300 shadow-card overflow-hidden">
                     <div class="bg-canopy-800 text-white px-6 py-4 flex items-center justify-between">
                         <div>
-                            <h3 class="font-serif text-xl font-bold">Current Booking (Tatkal subject to separate eligibility)</h3>
-                            <p class="text-xs text-parchment-200">Subject to Forest Dept. Availability • All-Inclusive</p>
+                            <h3 class="font-serif text-xl font-bold">Current Booking</h3>
+                            <p class="text-xs text-parchment-200">Subject to official availability • Quoted agency prices</p>
                         </div>
-                        <span class="bg-amber-gold text-canopy-950 text-xs font-bold px-3 py-1 rounded-full">No Hidden Fees</span>
+                        <span class="bg-amber-gold text-canopy-950 text-xs font-bold px-3 py-1 rounded-full">Charges Disclosed</span>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse text-sm">
@@ -707,11 +707,18 @@
                 </div>
             </div>
 
+            <!-- Separate Tatkal information: no unverified rates or unsupported seat options -->
+            <div class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8">
+                <h3 class="font-serif text-xl font-bold text-canopy-900">Tatkal Booking — Separate Category</h3>
+                <p class="text-sm text-stone-600 mt-2 leading-relaxed">Tatkal is separate from Current Booking. Tatkal eligibility, eligible vehicle types, booking window and official charges must be checked against the applicable Rajasthan Forest Department rules. We do not advertise Tatkal sharing seats or Canter Tatkal availability without official confirmation. Contact us for information; an enquiry is not a permit or booking confirmation.</p>
+                <a href="https://wa.me/919216432486?text=Hello%20Rooted%20Journeys%2C%20please%20explain%20current%20Tatkal%20eligibility%20and%20official%20booking%20rules." target="_blank" rel="noopener noreferrer" class="inline-flex mt-4 items-center gap-2 text-sm font-bold text-amber-tiger underline">Ask about Tatkal rules</a>
+            </div>
+
             <!-- Live Safari Cost Estimator -->
             <div class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-parchment-200">
                     <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-amber-tiger">All-Inclusive Cost Estimator • Charges Disclosed Before Payment</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-tiger">Safari Cost Estimator • Charges Disclosed Before Payment</span>
                         <h3 class="font-serif text-2xl font-bold text-canopy-900">Estimate Your Ranthambore Safari Cost</h3>
                     </div>
                     <p class="text-xs text-stone-600 max-w-md leading-relaxed">
@@ -724,7 +731,7 @@
                         <label for="calcQuota" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1.5">Booking Type</label>
                         <select id="calcQuota" class="w-full rounded-xl border border-parchment-300 bg-parchment-50 px-3 py-2.5 text-sm font-medium text-canopy-900">
                             <option value="advance">Advance Booking</option>
-                            <option value="tatkal">Current Booking (Tatkal subject to separate eligibility)</option>
+                            <option value="current">Current Booking</option>
                         </select>
                     </div>
 
@@ -1374,7 +1381,7 @@
                 canter_sharing: { label: 'Canter Sharing – 1 Seat', indian: 1250, foreigner: 2700 },
                 canter_exclusive: { label: 'Canter Exclusive – 20 Seats', indian: 25000, foreigner: 54000 }
             },
-            tatkal: {
+            current: {
                 gypsy_sharing: { label: 'Gypsy Sharing – 1 Seat', indian: 2500, foreigner: 4550 },
                 gypsy_exclusive: { label: 'Gypsy Exclusive – 6 Seats', indian: 28300, foreigner: 36900 },
                 canter_sharing: { label: 'Canter Sharing – 1 Seat', indian: 1500, foreigner: 2950 },
@@ -1425,7 +1432,7 @@
             const unitRate = item[nat];
             const total = unitRate * units;
             const formattedTotal = '₹' + total.toLocaleString('en-IN');
-            const quotaLabel = quota === 'advance' ? 'Advance Booking' : 'Current Booking (Tatkal subject to separate eligibility)';
+            const quotaLabel = quota === 'advance' ? 'Advance Booking' : 'Current Booking';
             const natLabel = nat === 'indian' ? 'Indian' : 'Foreigner';
             const isExclusive = option.includes('exclusive');
             const quantityDescriptor = isExclusive
