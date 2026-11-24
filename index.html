@@ -51,33 +51,13 @@
 
     <link rel="icon" type="image/png" href="rooted-journeys-logo.png">
 
+    <link rel="preconnect" href="https://commons.wikimedia.org">
+    <link rel="preconnect" href="https://upload.wikimedia.org">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
-                    },
-                    colors: {
-                        canopy: { 950: '#0E1A11', 900: '#1E3524', 800: '#2A4932', 700: '#3B6345' },
-                        sage: { 600: '#4E6E52', 500: '#648768', 100: '#E7EFE8' },
-                        amber: { tiger: '#C47335', ochre: '#A85C24', gold: '#E3A857', light: '#FBF0E4' },
-                        parchment: { 50: '#FAF8F4', 100: '#F4F1EA', 200: '#EAE4D7', 300: '#DCD3C0' }
-                    },
-                    boxShadow: {
-                        'emblem': '0 14px 34px -8px rgba(14, 26, 17, 0.35), 0 0 0 3px rgba(196, 115, 53, 0.28)',
-                        'card': '0 10px 28px -10px rgba(30, 53, 36, 0.12)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="site.css">
     <style>
         body { background-color: #FAF8F4; color: #1E3524; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
         .hero-overlay { background: linear-gradient(105deg, rgba(14, 26, 17, 0.92) 0%, rgba(30, 53, 36, 0.76) 52%, rgba(14, 26, 17, 0.62) 100%); }
@@ -90,6 +70,7 @@
 <style>
 :root{--rj-ink:#182e23;--rj-gold:#b86d37} body{line-height:1.65} #hero .hero-overlay{background:linear-gradient(100deg,rgba(9,25,17,.94),rgba(9,25,17,.68) 60%,rgba(9,25,17,.42))} #hero h1{letter-spacing:-.045em;line-height:1.04} #hero>div.relative{padding-top:clamp(3rem,6vw,6rem);padding-bottom:clamp(3rem,6vw,6rem)} #top{box-shadow:0 4px 24px #10251a0c} section[id]{scroll-margin-top:100px} #safaris article{transition:transform .25s,box-shadow .25s} #safaris article:hover{transform:translateY(-4px);box-shadow:0 16px 35px #182e231c} #booking-form input,#booking-form select{min-height:44px} a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #c47335;outline-offset:3px} .rj-editorial{max-width:80rem;margin:auto;padding:clamp(3rem,6vw,6rem) 1.25rem} .rj-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#a85c24} .rj-heading{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.12;margin:.6rem 0 1rem;color:var(--rj-ink)} .rj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:2rem} .rj-tile{background:#fff;border:1px solid #e5ded0;border-radius:18px;padding:1.6rem;box-shadow:0 8px 28px #182e2308} .rj-tile h3{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;margin:.5rem 0} .rj-tile p,.rj-faq p{color:#57534e;font-size:.94rem} .rj-faq details{border-bottom:1px solid #ddd6c8;padding:1.15rem 0} .rj-faq summary{cursor:pointer;font-weight:700;color:#182e23} .rj-faq p{margin:.75rem 0 .2rem} .rj-cta{display:inline-block;background:#1e3524;color:white;padding:.8rem 1.25rem;border-radius:10px;font-weight:700;margin-top:1rem} @media(max-width:700px){.rj-grid{grid-template-columns:1fr} #hero h1{font-size:clamp(2.6rem,10vw,4rem)} #hero .hero-overlay{background:rgba(9,25,17,.78)}} @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
+<style>footer a[href^="tel:"],footer a[href^="mailto:"], #booking-form a[href^="tel:"], #booking-form a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px} .zone-tab,.gallery-filter-btn{min-height:44px} [hidden]{display:none!important} </style>
 </head>
 <body class="antialiased selection:bg-amber-tiger selection:text-white">
 <div id="rj-home-view">
@@ -131,7 +112,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                    <img src="rooted-journeys-logo.png" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-11 h-11 lg:w-13 lg:h-13 rounded-full object-cover logo-ring group-hover:scale-105 transition-transform duration-300">
+                    <img src="rooted-journeys-logo.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" width="44" height="44" class="w-11 h-11 lg:w-13 lg:h-13 rounded-full object-cover logo-ring group-hover:scale-105 transition-transform duration-300">
                     <div>
                         <span class="block font-serif text-lg lg:text-xl font-extrabold text-canopy-900 leading-none tracking-tight">Rooted Journeys</span>
                         <span class="block text-[10px] font-semibold uppercase tracking-wider text-stone-600 mt-0.5">Private Travel Agency</span>
@@ -186,12 +167,13 @@
         </div>
     </header>
 
+    <main id="main-content">
     <!-- Hero Section + Safari Quote Request Form -->
     <section id="hero" class="relative overflow-hidden bg-canopy-950 text-white">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200"
+        <img fetchpriority="high" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200 1200w" sizes="100vw"
              alt="Royal Bengal Tiger walking through Ranthambore National Park"
              class="absolute inset-0 w-full h-full object-cover object-center" referrerpolicy="no-referrer"
-             onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.src='https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=1600';}">
+             onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=1000';}">
         <div class="hero-overlay absolute inset-0"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
@@ -199,7 +181,7 @@
 
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-canopy-900/90 border border-amber-gold/40 rounded-full pr-4 pl-1.5 py-1.5 backdrop-blur-sm">
-                        <img src="rooted-journeys-logo.png" alt="Rooted Journeys Circular Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-9 h-9 rounded-full object-cover border border-amber-gold">
+                        <img src="rooted-journeys-logo.webp" alt="Rooted Journeys Circular Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" width="36" height="36" class="w-9 h-9 rounded-full object-cover border border-amber-gold">
                         <span class="text-xs font-bold uppercase tracking-wider text-amber-gold">
                             Wildlife journeys • Ranthambore, Rajasthan
                         </span>
@@ -382,7 +364,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                        <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=640" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                         <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[11px] font-bold px-2.5 py-1 rounded-full">Gypsy &amp; Canter</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
@@ -401,7 +383,7 @@
 
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="ranthambore-jeep.webp" alt="Open Gypsy jeep safari with tiger in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
+                        <img loading="lazy" decoding="async" src="ranthambore-jeep.webp" srcset="ranthambore-jeep-small.webp 400w, ranthambore-jeep.webp 752w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="752" height="447" alt="Open Gypsy jeep safari with tiger in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                         <span class="absolute top-3 left-3 bg-canopy-900 text-amber-gold text-[11px] font-bold px-2.5 py-1 rounded-full">6-Seater Open 4x4</span>
                     <span class="absolute bottom-2 right-2 bg-canopy-950/85 text-white text-[10px] px-2 py-1 rounded">Illustrative vehicle photo</span>
                     </div>
@@ -421,7 +403,7 @@
 
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="ranthambore-canter.jpg" alt="Open Canter safari vehicle with passengers in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
+                        <img loading="lazy" decoding="async" src="ranthambore-canter.webp" width="370" height="453" alt="Open Canter safari vehicle with passengers in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                         <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[11px] font-bold px-2.5 py-1 rounded-full">20-Seater Open Bus</span>
                     <span class="absolute bottom-2 right-2 bg-canopy-950/85 text-white text-[10px] px-2 py-1 rounded">Illustrative vehicle photo</span>
                     </div>
@@ -441,7 +423,7 @@
 
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_park_from_the_Fort_in_Ranthambore_National_Park.jpg?width=1200" alt="Ranthambore jungle landscape" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                        <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_park_from_the_Fort_in_Ranthambore_National_Park.jpg?width=640" alt="Ranthambore jungle landscape" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                         <span class="absolute top-3 left-3 bg-canopy-900 text-amber-gold text-[11px] font-bold px-2.5 py-1 rounded-full">Sawai Madhopur</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
@@ -726,7 +708,7 @@
 
             <div id="zoneDetailCard" class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8 grid md:grid-cols-12 gap-6 items-center">
                 <div class="md:col-span-5 h-56 sm:h-64 rounded-2xl overflow-hidden bg-canopy-900">
-                    <img loading="lazy" decoding="async" id="zoneImage" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                    <img loading="lazy" decoding="async" id="zoneImage" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                 </div>
                 <div class="md:col-span-7 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
@@ -789,7 +771,7 @@
                 <button type="button" data-category="golden"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200', 'Real tiger photographed at Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640"
                          alt="Real tiger photographed at Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -804,7 +786,7 @@
                 <button type="button" data-category="lakes"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=640"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -819,7 +801,7 @@
                 <button type="button" data-category="golden"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=640"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -834,7 +816,7 @@
                 <button type="button" data-category="golden"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=640"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -849,7 +831,7 @@
                 <button type="button" data-category="lakes"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=640"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -864,7 +846,7 @@
                 <button type="button" data-category="fort"
                         onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Fort_of_Ranthambore_as_visible_from_Ranthambore_National_Park.jpg?width=1200', 'Ranthambore Fort photograph')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fort_of_Ranthambore_as_visible_from_Ranthambore_National_Park.jpg?width=1200"
+                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fort_of_Ranthambore_as_visible_from_Ranthambore_National_Park.jpg?width=640"
                          alt="Ranthambore Fort photograph"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -884,7 +866,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-start">
             <div class="lg:col-span-6 space-y-5">
                 <div class="flex items-center gap-4">
-                    <img loading="lazy" decoding="async" src="rooted-journeys-logo.png" alt="Rooted Journeys Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-16 h-16 rounded-full object-cover logo-ring shrink-0">
+                    <img loading="lazy" decoding="async" src="rooted-journeys-logo.webp" alt="Rooted Journeys Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-16 h-16 rounded-full object-cover logo-ring shrink-0">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-tiger">About Rooted Journeys</span>
                         <h2 class="font-serif text-3xl font-bold text-canopy-900">Your Local Ranthambore Travel Partners</h2>
@@ -973,13 +955,14 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer with Real Standalone Policy Page Links -->
     <footer class="bg-canopy-950 text-parchment-100 pt-14 pb-8 border-t border-canopy-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-canopy-800">
                 <div class="lg:col-span-2 space-y-4">
                     <div class="flex items-center gap-3">
-                        <img loading="lazy" decoding="async" src="rooted-journeys-logo.png" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-12 h-12 rounded-full object-cover logo-ring">
+                        <img loading="lazy" decoding="async" src="rooted-journeys-logo.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-12 h-12 rounded-full object-cover logo-ring">
                         <div>
                             <span class="font-serif text-xl font-bold text-white block">Rooted Journeys</span>
                             <span class="text-xs text-amber-gold">rootedjourneys.online • Independent Private Travel Agency</span>
