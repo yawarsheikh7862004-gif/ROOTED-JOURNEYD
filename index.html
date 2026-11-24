@@ -51,15 +51,1750 @@
 
     <link rel="icon" type="image/png" href="rooted-journeys-logo.png">
 
-    <link rel="preload" as="image" imagesrcset="ranthambore-hero-640.webp 640w, ranthambore-hero-1200.webp 1200w" imagesizes="100vw" fetchpriority="high">
-    <link rel="preconnect" href="https://commons.wikimedia.org">
-    <link rel="preconnect" href="https://upload.wikimedia.org">
+    <link rel="preload" as="image" imagesrcset="ranthambore-hero-v2-480.webp 480w, ranthambore-hero-v2-640.webp 640w, ranthambore-hero-v2-800.webp 800w, ranthambore-hero-v2-1200.webp 1200w" imagesizes="100vw" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="site.css">
+    <style id="rj-compiled-css">
+/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
+@layer properties;
+:root, :host {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --color-red-50: oklch(97.1% 0.013 17.38);
+  --color-red-200: oklch(88.5% 0.062 18.334);
+  --color-red-600: oklch(57.7% 0.245 27.325);
+  --color-red-700: oklch(50.5% 0.213 27.518);
+  --color-emerald-50: oklch(97.9% 0.021 166.113);
+  --color-emerald-200: oklch(90.5% 0.093 164.15);
+  --color-emerald-400: oklch(76.5% 0.177 163.223);
+  --color-emerald-500: oklch(69.6% 0.17 162.48);
+  --color-emerald-600: oklch(59.6% 0.145 163.225);
+  --color-emerald-700: oklch(50.8% 0.118 165.612);
+  --color-emerald-800: oklch(43.2% 0.095 166.913);
+  --color-stone-500: oklch(55.3% 0.013 58.071);
+  --color-stone-600: oklch(44.4% 0.011 73.639);
+  --color-stone-700: oklch(37.4% 0.01 67.558);
+  --color-white: #fff;
+  --spacing: 0.25rem;
+  --container-md: 28rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-7xl: 80rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.875rem;
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --tracking-tight: -0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  --leading-snug: 1.375;
+  --leading-relaxed: 1.625;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --blur-sm: 8px;
+  --blur-md: 12px;
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --default-mono-font-family: var(--font-mono);
+}
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+html, :host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbd, samp, pre {
+  font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+  font-feature-settings: var(--default-mono-font-feature-settings, normal);
+  font-variation-settings: var(--default-mono-font-variation-settings, normal);
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:-moz-focusring {
+  outline: auto;
+}
+progress {
+  vertical-align: baseline;
+}
+summary {
+  display: list-item;
+}
+ol, ul, menu {
+  list-style: none;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+button, input, select, optgroup, textarea, ::file-selector-button {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
+}
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+::file-selector-button {
+  margin-inline-end: 4px;
+}
+::placeholder {
+  opacity: 1;
+}
+@supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+  ::placeholder {
+    color: currentcolor;
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+  }
+}
+textarea {
+  resize: vertical;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-date-and-time-value {
+  min-height: 1lh;
+  text-align: inherit;
+}
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+  appearance: button;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+.inset-0 {
+  inset: calc(var(--spacing) * 0);
+}
+.top-0 {
+  top: calc(var(--spacing) * 0);
+}
+.top-3 {
+  top: calc(var(--spacing) * 3);
+}
+.right-2 {
+  right: calc(var(--spacing) * 2);
+}
+.right-3 {
+  right: calc(var(--spacing) * 3);
+}
+.right-5 {
+  right: calc(var(--spacing) * 5);
+}
+.bottom-2 {
+  bottom: calc(var(--spacing) * 2);
+}
+.bottom-3 {
+  bottom: calc(var(--spacing) * 3);
+}
+.bottom-5 {
+  bottom: calc(var(--spacing) * 5);
+}
+.left-3 {
+  left: calc(var(--spacing) * 3);
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.mt-0\.5 {
+  margin-top: calc(var(--spacing) * 0.5);
+}
+.mt-1 {
+  margin-top: calc(var(--spacing) * 1);
+}
+.mt-2 {
+  margin-top: calc(var(--spacing) * 2);
+}
+.mt-3 {
+  margin-top: calc(var(--spacing) * 3);
+}
+.mt-4 {
+  margin-top: calc(var(--spacing) * 4);
+}
+.mt-6 {
+  margin-top: calc(var(--spacing) * 6);
+}
+.mt-8 {
+  margin-top: calc(var(--spacing) * 8);
+}
+.mr-1 {
+  margin-right: calc(var(--spacing) * 1);
+}
+.mr-1\.5 {
+  margin-right: calc(var(--spacing) * 1.5);
+}
+.mb-1 {
+  margin-bottom: calc(var(--spacing) * 1);
+}
+.mb-1\.5 {
+  margin-bottom: calc(var(--spacing) * 1.5);
+}
+.mb-2 {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+.mb-3 {
+  margin-bottom: calc(var(--spacing) * 3);
+}
+.mb-4 {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+.mb-8 {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+.mb-10 {
+  margin-bottom: calc(var(--spacing) * 10);
+}
+.mb-12 {
+  margin-bottom: calc(var(--spacing) * 12);
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.table {
+  display: table;
+}
+.h-9 {
+  height: calc(var(--spacing) * 9);
+}
+.h-11 {
+  height: calc(var(--spacing) * 11);
+}
+.h-12 {
+  height: calc(var(--spacing) * 12);
+}
+.h-14 {
+  height: calc(var(--spacing) * 14);
+}
+.h-16 {
+  height: calc(var(--spacing) * 16);
+}
+.h-48 {
+  height: calc(var(--spacing) * 48);
+}
+.h-56 {
+  height: calc(var(--spacing) * 56);
+}
+.h-72 {
+  height: calc(var(--spacing) * 72);
+}
+.h-full {
+  height: 100%;
+}
+.max-h-\[75vh\] {
+  max-height: 75vh;
+}
+.w-9 {
+  width: calc(var(--spacing) * 9);
+}
+.w-11 {
+  width: calc(var(--spacing) * 11);
+}
+.w-12 {
+  width: calc(var(--spacing) * 12);
+}
+.w-14 {
+  width: calc(var(--spacing) * 14);
+}
+.w-16 {
+  width: calc(var(--spacing) * 16);
+}
+.w-36 {
+  width: calc(var(--spacing) * 36);
+}
+.w-auto {
+  width: auto;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-2xl {
+  max-width: var(--container-2xl);
+}
+.max-w-3xl {
+  max-width: var(--container-3xl);
+}
+.max-w-4xl {
+  max-width: var(--container-4xl);
+}
+.max-w-7xl {
+  max-width: var(--container-7xl);
+}
+.max-w-md {
+  max-width: var(--container-md);
+}
+.max-w-xl {
+  max-width: var(--container-xl);
+}
+.flex-1 {
+  flex: 1;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.border-collapse {
+  border-collapse: collapse;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-1\.5 {
+  gap: calc(var(--spacing) * 1.5);
+}
+.gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+.gap-2\.5 {
+  gap: calc(var(--spacing) * 2.5);
+}
+.gap-3 {
+  gap: calc(var(--spacing) * 3);
+}
+.gap-3\.5 {
+  gap: calc(var(--spacing) * 3.5);
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.gap-5 {
+  gap: calc(var(--spacing) * 5);
+}
+.gap-6 {
+  gap: calc(var(--spacing) * 6);
+}
+.gap-8 {
+  gap: calc(var(--spacing) * 8);
+}
+.gap-10 {
+  gap: calc(var(--spacing) * 10);
+}
+.space-y-1 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-1\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-3\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-4 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-6 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.gap-x-5 {
+  column-gap: calc(var(--spacing) * 5);
+}
+.gap-y-1 {
+  row-gap: calc(var(--spacing) * 1);
+}
+.divide-y {
+  :where(& > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+}
+.divide-parchment-200 {
+  :where(& > :not(:last-child)) {
+    border-color: #EAE4D7;
+  }
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+.rounded-3xl {
+  border-radius: var(--radius-3xl);
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-amber-gold {
+  border-color: #E3A857;
+}
+.border-amber-gold\/25 {
+  border-color: color-mix(in oklab, #E3A857 25%, transparent);
+}
+.border-amber-gold\/40 {
+  border-color: color-mix(in oklab, #E3A857 40%, transparent);
+}
+.border-amber-tiger\/20 {
+  border-color: color-mix(in oklab, #C47335 20%, transparent);
+}
+.border-amber-tiger\/30 {
+  border-color: color-mix(in oklab, #C47335 30%, transparent);
+}
+.border-amber-tiger\/40 {
+  border-color: color-mix(in oklab, #C47335 40%, transparent);
+}
+.border-canopy-800 {
+  border-color: #2A4932;
+}
+.border-emerald-200 {
+  border-color: var(--color-emerald-200);
+}
+.border-parchment-200 {
+  border-color: #EAE4D7;
+}
+.border-parchment-300 {
+  border-color: #DCD3C0;
+}
+.border-red-200 {
+  border-color: var(--color-red-200);
+}
+.border-white\/10 {
+  border-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+.border-white\/15 {
+  border-color: color-mix(in srgb, #fff 15%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 15%, transparent);
+  }
+}
+.border-white\/30 {
+  border-color: color-mix(in srgb, #fff 30%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+  }
+}
+.bg-amber-gold {
+  background-color: #E3A857;
+}
+.bg-amber-light {
+  background-color: #FBF0E4;
+}
+.bg-amber-tiger {
+  background-color: #C47335;
+}
+.bg-amber-tiger\/15 {
+  background-color: color-mix(in oklab, #C47335 15%, transparent);
+}
+.bg-canopy-800 {
+  background-color: #2A4932;
+}
+.bg-canopy-900 {
+  background-color: #1E3524;
+}
+.bg-canopy-900\/90 {
+  background-color: color-mix(in oklab, #1E3524 90%, transparent);
+}
+.bg-canopy-950 {
+  background-color: #0E1A11;
+}
+.bg-canopy-950\/75 {
+  background-color: color-mix(in oklab, #0E1A11 75%, transparent);
+}
+.bg-canopy-950\/85 {
+  background-color: color-mix(in oklab, #0E1A11 85%, transparent);
+}
+.bg-canopy-950\/90 {
+  background-color: color-mix(in oklab, #0E1A11 90%, transparent);
+}
+.bg-emerald-50 {
+  background-color: var(--color-emerald-50);
+}
+.bg-emerald-600 {
+  background-color: var(--color-emerald-600);
+}
+.bg-emerald-700 {
+  background-color: var(--color-emerald-700);
+}
+.bg-parchment-50 {
+  background-color: #FAF8F4;
+}
+.bg-parchment-50\/95 {
+  background-color: color-mix(in oklab, #FAF8F4 95%, transparent);
+}
+.bg-parchment-100 {
+  background-color: #F4F1EA;
+}
+.bg-parchment-200 {
+  background-color: #EAE4D7;
+}
+.bg-red-50 {
+  background-color: var(--color-red-50);
+}
+.bg-sage-100 {
+  background-color: #E7EFE8;
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-white\/15 {
+  background-color: color-mix(in srgb, #fff 15%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 15%, transparent);
+  }
+}
+.bg-white\/80 {
+  background-color: color-mix(in srgb, #fff 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+  }
+}
+.bg-gradient-to-t {
+  --tw-gradient-position: to top in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.from-canopy-950\/90 {
+  --tw-gradient-from: color-mix(in oklab, #0E1A11 90%, transparent);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.via-canopy-950\/10 {
+  --tw-gradient-via: color-mix(in oklab, #0E1A11 10%, transparent);
+  --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
+.to-transparent {
+  --tw-gradient-to: transparent;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.object-contain {
+  object-fit: contain;
+}
+.object-cover {
+  object-fit: cover;
+}
+.object-center {
+  object-position: center;
+}
+.p-2\.5 {
+  padding: calc(var(--spacing) * 2.5);
+}
+.p-3 {
+  padding: calc(var(--spacing) * 3);
+}
+.p-3\.5 {
+  padding: calc(var(--spacing) * 3.5);
+}
+.p-4 {
+  padding: calc(var(--spacing) * 4);
+}
+.p-5 {
+  padding: calc(var(--spacing) * 5);
+}
+.p-6 {
+  padding: calc(var(--spacing) * 6);
+}
+.px-2 {
+  padding-inline: calc(var(--spacing) * 2);
+}
+.px-2\.5 {
+  padding-inline: calc(var(--spacing) * 2.5);
+}
+.px-3 {
+  padding-inline: calc(var(--spacing) * 3);
+}
+.px-3\.5 {
+  padding-inline: calc(var(--spacing) * 3.5);
+}
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4);
+}
+.px-5 {
+  padding-inline: calc(var(--spacing) * 5);
+}
+.px-6 {
+  padding-inline: calc(var(--spacing) * 6);
+}
+.py-0\.5 {
+  padding-block: calc(var(--spacing) * 0.5);
+}
+.py-1 {
+  padding-block: calc(var(--spacing) * 1);
+}
+.py-1\.5 {
+  padding-block: calc(var(--spacing) * 1.5);
+}
+.py-2 {
+  padding-block: calc(var(--spacing) * 2);
+}
+.py-2\.5 {
+  padding-block: calc(var(--spacing) * 2.5);
+}
+.py-3 {
+  padding-block: calc(var(--spacing) * 3);
+}
+.py-3\.5 {
+  padding-block: calc(var(--spacing) * 3.5);
+}
+.py-4 {
+  padding-block: calc(var(--spacing) * 4);
+}
+.py-5 {
+  padding-block: calc(var(--spacing) * 5);
+}
+.py-12 {
+  padding-block: calc(var(--spacing) * 12);
+}
+.py-16 {
+  padding-block: calc(var(--spacing) * 16);
+}
+.pt-1 {
+  padding-top: calc(var(--spacing) * 1);
+}
+.pt-2 {
+  padding-top: calc(var(--spacing) * 2);
+}
+.pt-4 {
+  padding-top: calc(var(--spacing) * 4);
+}
+.pt-5 {
+  padding-top: calc(var(--spacing) * 5);
+}
+.pt-6 {
+  padding-top: calc(var(--spacing) * 6);
+}
+.pt-14 {
+  padding-top: calc(var(--spacing) * 14);
+}
+.pr-4 {
+  padding-right: calc(var(--spacing) * 4);
+}
+.pb-4 {
+  padding-bottom: calc(var(--spacing) * 4);
+}
+.pb-6 {
+  padding-bottom: calc(var(--spacing) * 6);
+}
+.pb-8 {
+  padding-bottom: calc(var(--spacing) * 8);
+}
+.pb-10 {
+  padding-bottom: calc(var(--spacing) * 10);
+}
+.pl-1\.5 {
+  padding-left: calc(var(--spacing) * 1.5);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-serif {
+  font-family: Playfair Display, Georgia, serif;
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+}
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+}
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+}
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+}
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+}
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+}
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+}
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+}
+.text-\[10px\] {
+  font-size: 10px;
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.leading-\[1\.1\] {
+  --tw-leading: 1.1;
+  line-height: 1.1;
+}
+.leading-none {
+  --tw-leading: 1;
+  line-height: 1;
+}
+.leading-relaxed {
+  --tw-leading: var(--leading-relaxed);
+  line-height: var(--leading-relaxed);
+}
+.leading-snug {
+  --tw-leading: var(--leading-snug);
+  line-height: var(--leading-snug);
+}
+.font-bold {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.font-extrabold {
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+}
+.font-medium {
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+.tracking-\[0\.2em\] {
+  --tw-tracking: 0.2em;
+  letter-spacing: 0.2em;
+}
+.tracking-\[0\.16em\] {
+  --tw-tracking: 0.16em;
+  letter-spacing: 0.16em;
+}
+.tracking-tight {
+  --tw-tracking: var(--tracking-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.tracking-wider {
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+}
+.tracking-widest {
+  --tw-tracking: var(--tracking-widest);
+  letter-spacing: var(--tracking-widest);
+}
+.break-all {
+  word-break: break-all;
+}
+.text-amber-gold {
+  color: #E3A857;
+}
+.text-amber-tiger {
+  color: #C47335;
+}
+.text-canopy-800 {
+  color: #2A4932;
+}
+.text-canopy-900 {
+  color: #1E3524;
+}
+.text-canopy-950 {
+  color: #0E1A11;
+}
+.text-emerald-400 {
+  color: var(--color-emerald-400);
+}
+.text-emerald-700 {
+  color: var(--color-emerald-700);
+}
+.text-emerald-800 {
+  color: var(--color-emerald-800);
+}
+.text-parchment-100 {
+  color: #F4F1EA;
+}
+.text-parchment-100\/95 {
+  color: color-mix(in oklab, #F4F1EA 95%, transparent);
+}
+.text-parchment-200 {
+  color: #EAE4D7;
+}
+.text-parchment-200\/80 {
+  color: color-mix(in oklab, #EAE4D7 80%, transparent);
+}
+.text-parchment-200\/90 {
+  color: color-mix(in oklab, #EAE4D7 90%, transparent);
+}
+.text-red-600 {
+  color: var(--color-red-600);
+}
+.text-red-700 {
+  color: var(--color-red-700);
+}
+.text-stone-500 {
+  color: var(--color-stone-500);
+}
+.text-stone-600 {
+  color: var(--color-stone-600);
+}
+.text-stone-700 {
+  color: var(--color-stone-700);
+}
+.text-white {
+  color: var(--color-white);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.underline {
+  text-decoration-line: underline;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.shadow {
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-card {
+  --tw-shadow: 0 10px 28px -10px var(--tw-shadow-color, rgba(30, 53, 36, 0.12));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.filter {
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(var(--blur-md));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(var(--blur-sm));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.transition-transform {
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.duration-300 {
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.duration-500 {
+  --tw-duration: 500ms;
+  transition-duration: 500ms;
+}
+.group-hover\:scale-105 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.selection\:bg-amber-tiger {
+  & *::selection {
+    background-color: #C47335;
+  }
+  &::selection {
+    background-color: #C47335;
+  }
+}
+.selection\:text-white {
+  & *::selection {
+    color: var(--color-white);
+  }
+  &::selection {
+    color: var(--color-white);
+  }
+}
+.hover\:scale-105 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.hover\:bg-amber-ochre {
+  &:hover {
+    @media (hover: hover) {
+      background-color: #A85C24;
+    }
+  }
+}
+.hover\:bg-canopy-800 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: #2A4932;
+    }
+  }
+}
+.hover\:bg-emerald-500 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-emerald-500);
+    }
+  }
+}
+.hover\:bg-emerald-800 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-emerald-800);
+    }
+  }
+}
+.hover\:bg-parchment-50 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: #FAF8F4;
+    }
+  }
+}
+.hover\:bg-parchment-200 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: #EAE4D7;
+    }
+  }
+}
+.hover\:bg-parchment-300 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: #DCD3C0;
+    }
+  }
+}
+.hover\:bg-white\/25 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, #fff 25%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-white) 25%, transparent);
+      }
+    }
+  }
+}
+.hover\:text-amber-gold {
+  &:hover {
+    @media (hover: hover) {
+      color: #E3A857;
+    }
+  }
+}
+.hover\:text-amber-tiger {
+  &:hover {
+    @media (hover: hover) {
+      color: #C47335;
+    }
+  }
+}
+.hover\:text-canopy-900 {
+  &:hover {
+    @media (hover: hover) {
+      color: #1E3524;
+    }
+  }
+}
+.hover\:underline {
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-line: underline;
+    }
+  }
+}
+.focus\:ring-2 {
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
+.focus\:ring-amber-tiger {
+  &:focus {
+    --tw-ring-color: #C47335;
+  }
+}
+.focus\:outline-none {
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.sm\:flex {
+  @media (width >= 40rem) {
+    display: flex;
+  }
+}
+.sm\:inline {
+  @media (width >= 40rem) {
+    display: inline;
+  }
+}
+.sm\:h-64 {
+  @media (width >= 40rem) {
+    height: calc(var(--spacing) * 64);
+  }
+}
+.sm\:w-40 {
+  @media (width >= 40rem) {
+    width: calc(var(--spacing) * 40);
+  }
+}
+.sm\:grid-cols-2 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.sm\:grid-cols-4 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.sm\:flex-row {
+  @media (width >= 40rem) {
+    flex-direction: row;
+  }
+}
+.sm\:p-7 {
+  @media (width >= 40rem) {
+    padding: calc(var(--spacing) * 7);
+  }
+}
+.sm\:p-8 {
+  @media (width >= 40rem) {
+    padding: calc(var(--spacing) * 8);
+  }
+}
+.sm\:px-6 {
+  @media (width >= 40rem) {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+}
+.sm\:text-3xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+}
+.sm\:text-4xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+.sm\:text-5xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+}
+.sm\:text-base {
+  @media (width >= 40rem) {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+}
+.sm\:text-lg {
+  @media (width >= 40rem) {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+}
+.sm\:text-sm {
+  @media (width >= 40rem) {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+}
+.sm\:text-xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
+.sm\:text-xs {
+  @media (width >= 40rem) {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+}
+.md\:col-span-5 {
+  @media (width >= 48rem) {
+    grid-column: span 5 / span 5;
+  }
+}
+.md\:col-span-7 {
+  @media (width >= 48rem) {
+    grid-column: span 7 / span 7;
+  }
+}
+.md\:grid-cols-2 {
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.md\:grid-cols-12 {
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.md\:flex-row {
+  @media (width >= 48rem) {
+    flex-direction: row;
+  }
+}
+.md\:items-center {
+  @media (width >= 48rem) {
+    align-items: center;
+  }
+}
+.lg\:col-span-2 {
+  @media (width >= 64rem) {
+    grid-column: span 2 / span 2;
+  }
+}
+.lg\:col-span-5 {
+  @media (width >= 64rem) {
+    grid-column: span 5 / span 5;
+  }
+}
+.lg\:col-span-6 {
+  @media (width >= 64rem) {
+    grid-column: span 6 / span 6;
+  }
+}
+.lg\:col-span-7 {
+  @media (width >= 64rem) {
+    grid-column: span 7 / span 7;
+  }
+}
+.lg\:h-13 {
+  @media (width >= 64rem) {
+    height: calc(var(--spacing) * 13);
+  }
+}
+.lg\:h-20 {
+  @media (width >= 64rem) {
+    height: calc(var(--spacing) * 20);
+  }
+}
+.lg\:w-13 {
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 13);
+  }
+}
+.lg\:grid-cols-2 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-4 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-5 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-12 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.lg\:px-8 {
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+}
+.lg\:py-20 {
+  @media (width >= 64rem) {
+    padding-block: calc(var(--spacing) * 20);
+  }
+}
+.lg\:py-22 {
+  @media (width >= 64rem) {
+    padding-block: calc(var(--spacing) * 22);
+  }
+}
+.lg\:text-sm {
+  @media (width >= 64rem) {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+}
+.lg\:text-xl {
+  @media (width >= 64rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
+.xl\:flex {
+  @media (width >= 80rem) {
+    display: flex;
+  }
+}
+.xl\:hidden {
+  @media (width >= 80rem) {
+    display: none;
+  }
+}
+.xl\:text-6xl {
+  @media (width >= 80rem) {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+    }
+  }
+}
+</style>
     <style>
         body { background-color: #FAF8F4; color: #1E3524; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
         .hero-overlay { background: linear-gradient(105deg, rgba(14, 26, 17, 0.92) 0%, rgba(30, 53, 36, 0.76) 52%, rgba(14, 26, 17, 0.62) 100%); }
@@ -114,7 +1849,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                    <img src="rooted-journeys-logo.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" width="44" height="44" class="w-11 h-11 lg:w-13 lg:h-13 rounded-full object-cover logo-ring group-hover:scale-105 transition-transform duration-300">
+                    <img src="rooted-journeys-logo-v2.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" width="44" height="44" class="w-11 h-11 lg:w-13 lg:h-13 rounded-full object-cover logo-ring group-hover:scale-105 transition-transform duration-300">
                     <div>
                         <span class="block font-serif text-lg lg:text-xl font-extrabold text-canopy-900 leading-none tracking-tight">Rooted Journeys</span>
                         <span class="block text-[10px] font-semibold uppercase tracking-wider text-stone-600 mt-0.5">Private Travel Agency</span>
@@ -172,7 +1907,7 @@
     <main id="main-content">
     <!-- Hero Section + Safari Quote Request Form -->
     <section id="hero" class="relative overflow-hidden bg-canopy-950 text-white">
-        <img fetchpriority="high" decoding="async" src="ranthambore-hero-640.webp" srcset="ranthambore-hero-640.webp 640w, ranthambore-hero-1200.webp 1200w" sizes="100vw"
+        <img fetchpriority="high" decoding="async" src="ranthambore-hero-v2-640.webp" srcset="ranthambore-hero-v2-480.webp 480w, ranthambore-hero-v2-640.webp 640w, ranthambore-hero-v2-800.webp 800w, ranthambore-hero-v2-1200.webp 1200w" sizes="100vw"
              alt="Royal Bengal Tiger walking through Ranthambore National Park"
              class="absolute inset-0 w-full h-full object-cover object-center" referrerpolicy="no-referrer"
              onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=1000';}">
@@ -183,7 +1918,7 @@
 
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-canopy-900/90 border border-amber-gold/40 rounded-full pr-4 pl-1.5 py-1.5 backdrop-blur-sm">
-                        <img src="rooted-journeys-logo.webp" alt="Rooted Journeys Circular Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" width="36" height="36" class="w-9 h-9 rounded-full object-cover border border-amber-gold">
+                        <img src="rooted-journeys-logo-v2.webp" alt="Rooted Journeys Circular Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" width="36" height="36" class="w-9 h-9 rounded-full object-cover border border-amber-gold">
                         <span class="text-xs font-bold uppercase tracking-wider text-amber-gold">
                             Wildlife journeys • Ranthambore, Rajasthan
                         </span>
@@ -366,7 +2101,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="ranthambore-tiger-640.webp" srcset="ranthambore-tiger-640.webp 640w, ranthambore-tiger-1200.webp 1200w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                        <img loading="lazy" decoding="async" src="ranthambore-tiger-v2-640.webp" srcset="ranthambore-tiger-v2-480.webp 480w, ranthambore-tiger-v2-640.webp 640w, ranthambore-tiger-v2-1200.webp 1200w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                         <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[11px] font-bold px-2.5 py-1 rounded-full">Gypsy &amp; Canter</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
@@ -385,7 +2120,7 @@
 
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="ranthambore-jeep.webp" srcset="ranthambore-jeep-small.webp 400w, ranthambore-jeep.webp 752w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="752" height="447" alt="Open Gypsy jeep safari with tiger in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
+                        <img loading="lazy" decoding="async" src="ranthambore-jeep-v2.webp" srcset="ranthambore-jeep-small-v2.webp 400w, ranthambore-jeep-v2.webp 752w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" width="752" height="447" alt="Open Gypsy jeep safari with tiger in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                         <span class="absolute top-3 left-3 bg-canopy-900 text-amber-gold text-[11px] font-bold px-2.5 py-1 rounded-full">6-Seater Open 4x4</span>
                     <span class="absolute bottom-2 right-2 bg-canopy-950/85 text-white text-[10px] px-2 py-1 rounded">Illustrative vehicle photo</span>
                     </div>
@@ -405,7 +2140,7 @@
 
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="ranthambore-canter.webp" width="370" height="453" alt="Open Canter safari vehicle with passengers in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
+                        <img loading="lazy" decoding="async" src="ranthambore-canter-v2.webp" width="370" height="453" alt="Open Canter safari vehicle with passengers in Ranthambore" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                         <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[11px] font-bold px-2.5 py-1 rounded-full">20-Seater Open Bus</span>
                     <span class="absolute bottom-2 right-2 bg-canopy-950/85 text-white text-[10px] px-2 py-1 rounded">Illustrative vehicle photo</span>
                     </div>
@@ -710,7 +2445,7 @@
 
             <div id="zoneDetailCard" class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8 grid md:grid-cols-12 gap-6 items-center">
                 <div class="md:col-span-5 h-56 sm:h-64 rounded-2xl overflow-hidden bg-canopy-900">
-                    <img loading="lazy" decoding="async" id="zoneImage" src="ranthambore-hero-640.webp" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                    <img loading="lazy" decoding="async" id="zoneImage" src="ranthambore-hero-v2-640.webp" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                 </div>
                 <div class="md:col-span-7 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
@@ -771,9 +2506,9 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Photo 1: Golden Hour -->
                 <button type="button" data-category="golden"
-                        onclick="openLightbox('ranthambore-hero-1200.webp', 'Real tiger photographed at Ranthambore National Park')"
+                        onclick="openLightbox('ranthambore-hero-v2-1200.webp', 'Real tiger photographed at Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="ranthambore-hero-640.webp"
+                    <img loading="lazy" decoding="async" src="ranthambore-hero-v2-640.webp"
                          alt="Real tiger photographed at Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -786,9 +2521,9 @@
 
                 <!-- Photo 2: Padam Talao & Lakes -->
                 <button type="button" data-category="lakes"
-                        onclick="openLightbox('ranthambore-tiger-1200.webp', 'Tiger photographed in Ranthambore National Park')"
+                        onclick="openLightbox('ranthambore-tiger-v2-1200.webp', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="ranthambore-tiger-640.webp"
+                    <img loading="lazy" decoding="async" src="ranthambore-tiger-v2-640.webp"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -868,7 +2603,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-start">
             <div class="lg:col-span-6 space-y-5">
                 <div class="flex items-center gap-4">
-                    <img loading="lazy" decoding="async" src="rooted-journeys-logo.webp" alt="Rooted Journeys Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-16 h-16 rounded-full object-cover logo-ring shrink-0">
+                    <img loading="lazy" decoding="async" src="rooted-journeys-logo-v2.webp" alt="Rooted Journeys Emblem" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-16 h-16 rounded-full object-cover logo-ring shrink-0">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-tiger">About Rooted Journeys</span>
                         <h2 class="font-serif text-3xl font-bold text-canopy-900">Your Local Ranthambore Travel Partners</h2>
@@ -964,7 +2699,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-canopy-800">
                 <div class="lg:col-span-2 space-y-4">
                     <div class="flex items-center gap-3">
-                        <img loading="lazy" decoding="async" src="rooted-journeys-logo.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-12 h-12 rounded-full object-cover logo-ring">
+                        <img loading="lazy" decoding="async" src="rooted-journeys-logo-v2.webp" alt="Rooted Journeys Logo" onerror="this.onerror=null;this.style.opacity='0.4';" class="w-12 h-12 rounded-full object-cover logo-ring">
                         <div>
                             <span class="font-serif text-xl font-bold text-white block">Rooted Journeys</span>
                             <span class="text-xs text-amber-gold">rootedjourneys.online • Independent Private Travel Agency</span>
@@ -1241,13 +2976,13 @@
 
         // Zones Explorer
         const zonesData = {
-            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: 'ranthambore-hero-1200.webp' },
-            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: 'ranthambore-tiger-1200.webp' },
+            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: 'ranthambore-hero-v2-1200.webp' },
+            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: 'ranthambore-tiger-v2-1200.webp' },
             3: { title: 'Zone 3 – Padam Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Padam Talao, Rajbagh Ruins, Jogi Mahal', wildlife: 'Royal Bengal Tiger, Sambar Deer, Marsh Crocodile, Peacocks', desc: 'Known for Padam Talao and the ruins of Rajbagh set against ancient stone walls.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200' },
             4: { title: 'Zone 4 – Malik Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Malik Talao, Lakkad Da, Berda', wildlife: 'Royal Bengal Tiger, Wild Boar, Langur, Jungle Fowl', desc: 'Known for waterholes, tall grasses, and varied woodland.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' },
             5: { title: 'Zone 5 – Kachida Valley', group: 'Zone 1/2/3/4/5/6', spots: 'Kachida Valley, Dhok Forests, Bakula', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Chital', desc: 'Characterized by rocky outcrops, valleys, and dhok tree cover.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200' },
-            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: 'ranthambore-hero-1200.webp' },
-            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'ranthambore-tiger-1200.webp' },
+            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: 'ranthambore-hero-v2-1200.webp' },
+            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'ranthambore-tiger-v2-1200.webp' },
             8: { title: 'Zone 8 – Balas', group: 'Zone 7/8/9/10', spots: 'Balas, Aravalli Ridges, Dry Deciduous Forest', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Deer', desc: 'Marked by undulating hills and dry deciduous forest cover.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200' },
             9: { title: 'Zone 9 – Qualji', group: 'Zone 7/8/9/10', spots: 'Qualji, Banas River Corridor, Riverine Forest', wildlife: 'Royal Bengal Tiger, Striped Hyena, Indian Fox, Birds', desc: 'Stretches toward the Banas riverine belt with open terrain and ravines.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' },
             10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200' }
