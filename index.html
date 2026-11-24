@@ -51,12 +51,14 @@
 
     <link rel="icon" type="image/png" href="rooted-journeys-logo.png">
 
+    <link rel="preload" as="image" imagesrcset="ranthambore-hero-640.webp 640w, ranthambore-hero-1200.webp 1200w" imagesizes="100vw" fetchpriority="high">
     <link rel="preconnect" href="https://commons.wikimedia.org">
     <link rel="preconnect" href="https://upload.wikimedia.org">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="site.css">
     <style>
         body { background-color: #FAF8F4; color: #1E3524; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
@@ -170,7 +172,7 @@
     <main id="main-content">
     <!-- Hero Section + Safari Quote Request Form -->
     <section id="hero" class="relative overflow-hidden bg-canopy-950 text-white">
-        <img fetchpriority="high" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=960" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640 640w, https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200 1200w" sizes="100vw"
+        <img fetchpriority="high" decoding="async" src="ranthambore-hero-640.webp" srcset="ranthambore-hero-640.webp 640w, ranthambore-hero-1200.webp 1200w" sizes="100vw"
              alt="Royal Bengal Tiger walking through Ranthambore National Park"
              class="absolute inset-0 w-full h-full object-cover object-center" referrerpolicy="no-referrer"
              onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&w=1000';}">
@@ -364,7 +366,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <article class="bg-white rounded-2xl overflow-hidden border border-parchment-300 shadow-card flex flex-col">
                     <div class="h-48 overflow-hidden bg-canopy-900 relative">
-                        <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=640" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                        <img loading="lazy" decoding="async" src="ranthambore-tiger-640.webp" srcset="ranthambore-tiger-640.webp 640w, ranthambore-tiger-1200.webp 1200w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="Royal Bengal Tiger in Ranthambore forest" class="w-full h-full object-cover hover:scale-105 transition duration-500" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                         <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[11px] font-bold px-2.5 py-1 rounded-full">Gypsy &amp; Canter</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
@@ -708,7 +710,7 @@
 
             <div id="zoneDetailCard" class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8 grid md:grid-cols-12 gap-6 items-center">
                 <div class="md:col-span-5 h-56 sm:h-64 rounded-2xl overflow-hidden bg-canopy-900">
-                    <img loading="lazy" decoding="async" id="zoneImage" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
+                    <img loading="lazy" decoding="async" id="zoneImage" src="ranthambore-hero-640.webp" alt="Ranthambore Zone 1 Singhdwar" class="w-full h-full object-cover" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallbackUsed){this.dataset.fallbackUsed='1';this.removeAttribute('srcset');this.src='https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=900';}">
                 </div>
                 <div class="md:col-span-7 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
@@ -769,9 +771,9 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Photo 1: Golden Hour -->
                 <button type="button" data-category="golden"
-                        onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200', 'Real tiger photographed at Ranthambore National Park')"
+                        onclick="openLightbox('ranthambore-hero-1200.webp', 'Real tiger photographed at Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=640"
+                    <img loading="lazy" decoding="async" src="ranthambore-hero-640.webp"
                          alt="Real tiger photographed at Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -784,9 +786,9 @@
 
                 <!-- Photo 2: Padam Talao & Lakes -->
                 <button type="button" data-category="lakes"
-                        onclick="openLightbox('https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200', 'Tiger photographed in Ranthambore National Park')"
+                        onclick="openLightbox('ranthambore-tiger-1200.webp', 'Tiger photographed in Ranthambore National Park')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
-                    <img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=640"
+                    <img loading="lazy" decoding="async" src="ranthambore-tiger-640.webp"
                          alt="Tiger photographed in Ranthambore National Park"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
@@ -1239,13 +1241,13 @@
 
         // Zones Explorer
         const zonesData = {
-            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200' },
-            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200' },
+            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: 'ranthambore-hero-1200.webp' },
+            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: 'ranthambore-tiger-1200.webp' },
             3: { title: 'Zone 3 – Padam Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Padam Talao, Rajbagh Ruins, Jogi Mahal', wildlife: 'Royal Bengal Tiger, Sambar Deer, Marsh Crocodile, Peacocks', desc: 'Known for Padam Talao and the ruins of Rajbagh set against ancient stone walls.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200' },
             4: { title: 'Zone 4 – Malik Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Malik Talao, Lakkad Da, Berda', wildlife: 'Royal Bengal Tiger, Wild Boar, Langur, Jungle Fowl', desc: 'Known for waterholes, tall grasses, and varied woodland.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' },
             5: { title: 'Zone 5 – Kachida Valley', group: 'Zone 1/2/3/4/5/6', spots: 'Kachida Valley, Dhok Forests, Bakula', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Chital', desc: 'Characterized by rocky outcrops, valleys, and dhok tree cover.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200' },
-            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_at_Ranthambore_National_Park.jpg?width=1200' },
-            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park,_Rajasthan.jpg?width=1200' },
+            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: 'ranthambore-hero-1200.webp' },
+            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'ranthambore-tiger-1200.webp' },
             8: { title: 'Zone 8 – Balas', group: 'Zone 7/8/9/10', spots: 'Balas, Aravalli Ridges, Dry Deciduous Forest', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Deer', desc: 'Marked by undulating hills and dry deciduous forest cover.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/A_tiger_at_Ranthambore_National_Park.jpg?width=1200' },
             9: { title: 'Zone 9 – Qualji', group: 'Zone 7/8/9/10', spots: 'Qualji, Banas River Corridor, Riverine Forest', wildlife: 'Royal Bengal Tiger, Striped Hyena, Indian Fox, Birds', desc: 'Stretches toward the Banas riverine belt with open terrain and ravines.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambore_National_Park.jpg?width=1200' },
             10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tiger_in_Ranthambhore_National_Park.jpg?width=1200' }
