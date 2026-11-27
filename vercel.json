@@ -189,22 +189,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/ranthambore-advance-booking.html",
-      "destination": "/ranthambore-booking-guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/ranthambore-current-booking.html",
-      "destination": "/ranthambore-booking-guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/ranthambore-tatkal-booking.html",
-      "destination": "/ranthambore-booking-guide.html",
-      "permanent": true
-    }
   ]
 }
