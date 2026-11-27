@@ -1,4 +1,9 @@
 {
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/packages", "destination": "/packages.html" },
+    { "source": "/packages.html", "destination": "/packages.html" }
+  ],
   "headers": [
     {
       "source": "/ranthambore-jeep-small.webp",
