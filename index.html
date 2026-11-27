@@ -1949,8 +1949,8 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                             <p class="text-parchment-200 mt-0.5">Base Charge + Agency Fee</p>
                         </div>
                         <div class="bg-canopy-950/75 border border-white/10 rounded-xl p-3">
-                            <p class="font-bold text-amber-gold">Gypsy &amp; Canter</p>
-                            <p class="text-parchment-200 mt-0.5">From ₹1,250 / Seat</p>
+                            <p class="font-bold text-amber-gold">Advance shared Canter</p>
+                            <p class="text-parchment-200 mt-0.5">From ₹1,250 per Indian visitor</p>
                         </div>
                         <div class="bg-canopy-950/75 border border-white/10 rounded-xl p-3">
                             <p class="font-bold text-amber-gold">Zones 1 to 10</p>
@@ -1981,12 +1981,20 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                             <p><span class="font-semibold">Current:</span> Canter Ind ₹1,500 (<em>~₹971 + ₹529</em>) / For ₹2,950 (<em>~₹2,450 + ₹500</em>) • Gypsy Ind ₹2,500 (<em>~₹1,627 + ₹873</em>) / For ₹4,550 (<em>~₹3,050 + ₹1,500</em>)</p>
                         </div>
 
-                        <p class="text-xs text-stone-600 mb-3">Submitting this form sends a free enquiry only. No payment is taken here, and no permit or zone is guaranteed until issued by the Rajasthan Forest Department.</p>
+                        <p class="text-xs text-stone-600 mb-3">This form opens WhatsApp with a free enquiry. We send you an itemized quote. If you accept, you pay Rooted Journeys. For safaris, we send confirmation once the Rajasthan Forest Department issues your permit. Permits and zones are subject to availability.</p>
 
                         <p class="text-sm text-stone-600 mb-3">100% refund if we cannot secure your safari permit, including government and agency service charges. Refund initiated the same day or next day after unsuccessful booking; bank credit times may vary. <a href="/refund-policy.html" style="text-decoration:underline">Read our refund policy</a>.</p><form id="safariBookingForm" class="space-y-3.5" novalidate><fieldset><legend class="font-bold">Services required (select multiple)</legend><label style="display:block"><input type="checkbox" name="travelService" value="Jungle Safari" checked> Jungle Safari</label><label style="display:block"><input type="checkbox" name="travelService" value="Hotel &amp; Resort Accommodation"> Hotel &amp; Resort Accommodation</label><label style="display:block"><input type="checkbox" name="travelService" value="Arrival &amp; Departure Transfers"> Arrival &amp; Departure Transfers</label><label style="display:block"><input type="checkbox" name="travelService" value="Local Sightseeing"> Local Sightseeing</label><label style="display:block"><input type="checkbox" name="travelService" value="Ranthambhore Fort Visit"> Ranthambhore Fort Visit</label><label style="display:block"><input type="checkbox" name="travelService" value="Village Tours"> Village Tours</label><label style="display:block"><input type="checkbox" name="travelService" value="Chambal River Excursions"> Chambal River Excursions</label><label style="display:block"><input type="checkbox" name="travelService" value="Customised Tour Packages"> Customised Tour Packages</label></fieldset><label for="tourGuests">Number of travellers</label><input id="tourGuests" type="number" min="1" value="1" required class="w-full rounded-xl border p-2"><label for="tourNotes">Trip details / hotel category / pickup / departure date</label><textarea id="tourNotes" class="w-full rounded-xl border p-2" rows="3"></textarea><div>
                                     <label for="safariDate" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Travel Date <span class="text-red-600">*</span></label>
                                     <input type="date" id="safariDate" name="safariDate" required class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm text-canopy-900 focus:outline-none focus:ring-2 focus:ring-amber-tiger">
                                 </div><div id="safariFields">
+                                <label for="visitorRate" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Visitor rate</label>
+                                <select id="visitorRate" name="visitorRate" class="w-full rounded-xl border border-parchment-300 bg-white px-3.5 py-2.5 text-sm mb-3">
+                                    <option value="">Confirm in quote</option>
+                                    <option value="indian">Indian visitors</option>
+                                    <option value="foreigner">Foreign visitors</option>
+                                    <option value="mixed">Mixed group</option>
+                                </select>
+                                <p id="tatkalFormPrice" class="text-sm text-stone-600 mb-3" hidden>Standard Tatkal price per private Jeep for 1–6 passengers: ₹28,300 for Indian visitors or ₹37,000 for foreign visitors. The assigned Jeep, driver and guide are included. Choosing a particular Jeep, guide or both costs extra. We quote selection fees before you decide.</p>
                             <div class="grid sm:grid-cols-2 gap-3.5">
                                 <div>
                                     <label for="bookingQuota" class="block text-xs font-bold uppercase tracking-wider text-canopy-900 mb-1">Booking Quota <span class="text-red-600">*</span></label>
@@ -2074,7 +2082,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
                             <button type="submit" class="w-full bg-canopy-900 hover:bg-canopy-800 text-white font-bold py-3.5 px-5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
                                 <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
-                                <span>Request Availability &amp; Itemized Quote</span>
+                                <span>Request an itemized quote on WhatsApp</span>
                             </button>
 
                             <p class="text-[11px] text-stone-600 text-center leading-relaxed">
@@ -2311,11 +2319,11 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                                     <td class="py-3.5 px-5 font-semibold text-canopy-900">Gypsy Exclusive – 6 Seats</td>
                                     <td class="py-3.5 px-4">
                                         <span class="font-bold text-canopy-800 block">₹28,300</span>
-                                        <span class="text-[11px] text-stone-500">Includes estimated third-party costs + agency fee</span>
+                                        <span class="text-[11px] text-stone-500">~₹9,762 base + ₹18,538 fee</span>
                                     </td>
                                     <td class="py-3.5 px-5">
                                         <span class="font-bold text-amber-tiger block">₹36,900</span>
-                                        <span class="text-[11px] text-stone-500">Includes estimated third-party costs + agency fee</span>
+                                        <span class="text-[11px] text-stone-500">~₹18,300 base + ₹18,600 fee</span>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-parchment-50">
@@ -2353,7 +2361,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                 <a href="https://wa.me/919216432486?text=Hello%20Rooted%20Journeys%2C%20please%20explain%20current%20Tatkal%20eligibility%20and%20official%20booking%20rules." target="_blank" rel="noopener noreferrer" class="inline-flex mt-3 items-center gap-2 text-sm font-bold text-amber-tiger underline">Ask about Tatkal rules</a>
             </div>
 
-            <section class="rj-extra"><h3 style="font-weight:bold">Tatkal private Jeep — price per vehicle</h3><table style="width:100%;text-align:left"><thead><tr><th>Charges</th><th>Indian</th><th>Foreign</th></tr></thead><tbody><tr><td>Government booking charges</td><td>₹23,300</td><td>₹32,000</td></tr><tr><td>Agency service fee</td><td>₹5,000</td><td>₹5,000</td></tr><tr><th>Total</th><th>₹28,300</th><th>₹37,000</th></tr></tbody></table><p>Private Jeep only; same price for 1–6 passengers. No sharing or Canter. Fixed vehicle, driver and guide services are not included. Alternative quota subject to availability and applicable rules; confirmation is not guaranteed. Government charges may change; confirm before payment.</p></section><p class="rj-extra" style="padding:16px"><strong>100% refund if we cannot secure your safari permit, including government and agency service charges. Refund initiated the same day or next day after unsuccessful booking; bank credit times may vary.</strong> <a href="/refund-policy.html" style="text-decoration:underline">Read our refund policy</a>.</p><!-- Live Safari Cost Estimator -->
+            <section class="rj-extra"><h3 style="font-weight:bold">Tatkal private Jeep prices for 1–6 passengers</h3><table style="width:100%;text-align:left"><thead><tr><th>Charges</th><th>Indian</th><th>Foreign</th></tr></thead><tbody><tr><td>Estimated third-party booking charges</td><td>₹23,300</td><td>₹32,000</td></tr><tr><td>Agency service fee</td><td>₹5,000</td><td>₹5,000</td></tr><tr><th>Standard total per Jeep</th><th>₹28,300</th><th>₹37,000</th></tr></tbody></table><p>The standard price is per private Jeep for 1–6 passengers and includes the assigned Jeep, driver and guide. You may request a particular Jeep, a particular guide, or both for an additional selection fee. We quote any selection fees before you decide. Bookings are subject to availability.</p></section><p class="rj-extra" style="padding:16px"><strong>100% refund if we cannot secure your safari permit, including government and agency service charges. Refund initiated the same day or next day after unsuccessful booking; bank credit times may vary.</strong> <a href="/refund-policy.html" style="text-decoration:underline">Read our refund policy</a>.</p><!-- Live Safari Cost Estimator -->
             <div class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-parchment-200">
                     <div>
@@ -2361,7 +2369,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                         <h3 class="font-serif text-2xl font-bold text-canopy-900">Estimate Your Ranthambore Safari Cost</h3>
                     </div>
                     <p class="text-xs text-stone-600 max-w-md leading-relaxed">
-                        <strong>Good to Know:</strong> Listed estimates include applicable booking charges plus Rooted Journeys' agency service fee; fixed vehicle, driver and guide services are not included for Tatkal (applicable taxes, if any, will be disclosed before payment). Final payable amounts and itemized splits are confirmed in writing before payment.
+                        Prices include estimated third-party booking charges and our agency fee. The standard Tatkal price includes the assigned Jeep, driver and guide. Choosing a particular Jeep, guide or both costs extra. We confirm the full price in writing before payment.
                     </p>
                 </div>
 
@@ -2396,7 +2404,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                         </select>
                     </div>
                     <div class="bg-canopy-900 text-white rounded-2xl p-4 flex flex-col justify-between">
-                        <span class="text-[11px] uppercase tracking-wider text-amber-gold font-bold">Estimated Total Quote</span>
+                        <span class="text-[11px] uppercase tracking-wider text-amber-gold font-bold" id="calcPriceLabel">Estimated Total Quote</span>
                         <span id="calcTotal" class="font-serif text-2xl font-extrabold text-white mt-1">₹2,450</span>
                     </div>
                 </div>
@@ -2406,7 +2414,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                         1 Seat (Gypsy Sharing – 1 Seat) — Advance Booking, Indian = <strong>₹2,450</strong>
                     </span>
                     <div class="flex flex-wrap gap-3">
-                        <a href="#booking-form" class="inline-flex items-center gap-2 bg-canopy-900 hover:bg-canopy-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition">
+                        <a id="calcFormLink" href="#booking-form" class="inline-flex items-center gap-2 bg-canopy-900 hover:bg-canopy-800 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition">
                             <i class="fa-solid fa-calendar-check"></i>
                             <span>Request Written Quote</span>
                         </a>
@@ -2599,7 +2607,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     </section>
 
 <section id="travel-guide" class="bg-parchment-50 border-b border-parchment-200"><div class="rj-editorial"><p class="rj-kicker">The field guide</p><h2 class="rj-heading">Plan your Ranthambore safari</h2><p class="text-stone-600 max-w-3xl">From choosing a vehicle to understanding the booking process, here is a practical starting point for your wildlife journey.</p><div class="rj-grid"><article class="rj-tile"><span class="rj-kicker">01</span><h3>Choose your safari</h3><p>A six-seat Gypsy suits smaller groups and travelers who prefer a compact vehicle. A twenty-seat Canter is another option for shared trips and larger groups.</p></article><article class="rj-tile"><span class="rj-kicker">02</span><h3>Compare the costs</h3><p>Our indicative advance shared rates start at ₹1,250 for Indian Canter guests and ₹2,450 for Indian Gypsy guests. Check the full rate table for other options.</p></article><article class="rj-tile"><span class="rj-kicker">03</span><h3>Plan your visit</h3><p>Choose your preferred date, morning or afternoon shift and vehicle. Share your preferences early, especially if your travel dates are fixed.</p></article></div><div class="mt-8 flex flex-wrap gap-4"><a class="rj-cta" href="#rates">Compare safari prices</a><a class="rj-cta" href="#zones">Explore safari zones</a><a class="rj-cta" href="#gallery">View wildlife gallery</a></div></div></section><section id="booking-guides" class="bg-parchment-50"><div class="rj-editorial"><p class="rj-kicker">Safari booking assistance</p><h2 class="rj-heading">Ranthambhore safari booking and travel guides</h2><p class="mb-4 text-stone-600">Planning a safari today, tomorrow or on a future date? Ask us about advance, current, Tatkal options. These are separate booking categories; availability, applicable fees and eligibility must be confirmed before payment. No permit or wildlife sighting is guaranteed.</p><nav aria-label="Safari travel guides" class="grid sm:grid-cols-2 gap-3"><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-booking-guide.html">Ranthambore Safari Booking Guide</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-price.html">Ranthambore Safari Price Guide</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-jeep.html">Ranthambore Jeep Safari</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-canter.html">Ranthambore Canter Safari</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-current-booking.html">Ranthambore Current Safari Booking</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-tatkal-booking.html">Ranthambore Tatkal Safari Booking</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-advance-booking.html">Ranthambore Advance Safari Booking</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-zones.html">Ranthambore Safari Zones Guide</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-timings.html">Ranthambore Safari Timings</a><a class="block bg-white border border-parchment-200 rounded-xl p-3 text-canopy-900 font-semibold hover:underline" href="/ranthambore-best-time.html">Best Time to Visit Ranthambore</a></nav><div class="mt-6 flex flex-wrap gap-3"><a class="rj-cta" href="https://wa.me/919216432486">Enquire on WhatsApp</a><a class="rj-cta" href="tel:+919216432486">Call for safari assistance</a></div></div></section>
-    <section id="faq" class="bg-parchment-100"><div class="rj-editorial rj-faq"><p class="rj-kicker">Before you travel</p><h2 class="rj-heading">Frequently asked questions</h2><details><summary>What if my safari permit cannot be secured?</summary><p>100% refund if we cannot secure your safari permit, including government and agency service charges. Refund initiated the same day or next day after unsuccessful booking; bank credit times may vary. <a href="/refund-policy.html" style="text-decoration:underline">Read our refund policy</a>.</p></details><details><summary>How do I book a Ranthambore safari?</summary><p>Send your preferred date, shift, vehicle and group size using our enquiry form or WhatsApp. We check the available options and provide an itemized quote before payment. Permits are issued through Forest Department channels.</p></details><details><summary>How much does a Ranthambore safari cost?</summary><p>Our indicative advance shared rates are ₹1,250 for Indian Canter guests, ₹2,450 for Indian Gypsy guests, ₹2,700 for foreign Canter guests and ₹3,900 for foreign Gypsy guests, per seat. Final rates are confirmed before payment.</p></details><details><summary>What is the difference between Gypsy and Canter?</summary><p>A Gypsy is a six-seat open vehicle, while a Canter is a larger twenty-seat open vehicle. Both are subject to availability and park rules.</p></details><details><summary>Can I request a specific safari zone?</summary><p>Yes, you can share your preferred zone. Allocation depends on Forest Department rules and availability; a requested zone is not guaranteed.</p></details><details><summary>Are tiger sightings guaranteed?</summary><p>No. Ranthambore is a natural wildlife habitat, and sightings depend on animal movements and conditions.</p></details><details><summary>Can I enquire about last-minute safari bookings?</summary><p>Yes. Ask about current booking availability. Current and Tatkal are separate booking categories, and neither guarantees a permit.</p></details><details><summary>Is Rooted Journeys an official government booking portal?</summary><p>No. Rooted Journeys is an independent private travel agency offering safari booking assistance. You may also book directly through official Forest Department channels.</p></details><details><summary>Can I enquire about a Ranthambhore safari for today or tomorrow?</summary><p>Yes. Send your date, preferred shift, nationality, vehicle and group size. We can check possible last-minute options and provide a quote, subject to availability.</p></details><details><summary>Are current and Tatkal bookings the same?</summary><p>No. They are distinct booking categories with different rules and availability. Contact us to discuss which options may apply to your travel date. No category guarantees a permit.</p></details><details><summary>Can Indian and international visitors request a private Jeep safari?</summary><p>Yes, both can enquire about exclusive Gypsy options. Vehicle availability, applicable nationality-based rates and park rules determine the final quote.</p></details><a href="#booking-form" class="rj-cta">Plan my safari</a></div></section>
+    <section id="faq" class="bg-parchment-100"><div class="rj-editorial rj-faq"><p class="rj-kicker">Before you travel</p><h2 class="rj-heading">Frequently asked questions</h2><details><summary>What if my safari permit cannot be secured?</summary><p>100% refund if we cannot secure your safari permit, including government and agency service charges. Refund initiated the same day or next day after unsuccessful booking; bank credit times may vary. <a href="/refund-policy.html" style="text-decoration:underline">Read our refund policy</a>.</p></details><details><summary>How do I book a Ranthambore safari?</summary><p>Send your preferred date, shift, vehicle and group size using our enquiry form or WhatsApp. We check the available options and provide an itemized quote before payment. Permits are issued through Forest Department channels.</p></details><details><summary>How much does a Ranthambore safari cost?</summary><p>Our indicative advance shared rates are ₹1,250 for Indian Canter guests, ₹2,450 for Indian Gypsy guests, ₹2,700 for foreign Canter guests and ₹3,900 for foreign Gypsy guests, per seat. Final rates are confirmed before payment.</p></details><details><summary>What is the difference between Gypsy and Canter?</summary><p>A Gypsy is a six-seat open vehicle, while a Canter is a larger twenty-seat open vehicle. Both are subject to availability and park rules.</p></details><details><summary>Can I request a specific safari zone?</summary><p>Yes, you can share your preferred zone. Allocation depends on Forest Department rules and availability; a requested zone is not guaranteed.</p></details><details><summary>Are tiger sightings guaranteed?</summary><p>No. Ranthambore is a natural wildlife habitat, and sightings depend on animal movements and conditions.</p></details><details><summary>Can I enquire about last-minute safari bookings?</summary><p>Yes. Ask about current booking availability. Current and Tatkal are separate booking categories, and neither guarantees a permit.</p></details><details><summary>Is Rooted Journeys an official government booking portal?</summary><p>No. Rooted Journeys is an independent private travel agency offering safari booking assistance. You may also book directly through the <a class="underline" href="https://forest.rajasthan.gov.in/content/raj/forest/en/citizen-services/safari-zoo-ticket-booking.html">Rajasthan Forest Department booking page</a>.</p></details><details><summary>Can I enquire about a Ranthambhore safari for today or tomorrow?</summary><p>Yes. Send your date, preferred shift, nationality, vehicle and group size. We can check possible last-minute options and provide a quote, subject to availability.</p></details><details><summary>Are current and Tatkal bookings the same?</summary><p>No. They are distinct booking categories with different rules and availability. Contact us to discuss which options may apply to your travel date. No category guarantees a permit.</p></details><details><summary>Can Indian and international visitors request a private Jeep safari?</summary><p>Yes, both can enquire about exclusive Gypsy options. Vehicle availability, applicable nationality-based rates and park rules determine the final quote.</p></details><a href="#booking-form" class="rj-cta">Plan my safari</a></div></section>
     <!-- About & Contact Summary Section -->
     <section class="rj-extra" id="accommodation"><h2>Hotel &amp; Resort Accommodation</h2><p>Discover comfortable stays, heritage hotels and wildlife resorts in Ranthambhore. We assist with accommodation reservations according to your budget, travel dates and preferences. Properties are independently operated; availability and prices are confirmed before payment.</p><p><a href="https://wa.me/919216432486?text=Hello%20Rooted%20Journeys%2C%20I%20would%20like%20a%20hotel%20accommodation%20quote.">Enquire about hotel accommodation</a></p></section><section class="rj-extra" aria-label="Location and customer reviews"><h2>Find Rooted Journeys on Google</h2><p>Registered business location: Sawai Madhopur, Rajasthan. Contact us online before arranging any visit.</p><iframe title="Map of registered business address" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=22%20Hammal%20Mohalla%2C%20Old%20City%2C%20Sawai%20Madhopur%2C%20Rajasthan%20322021%2C%20India&amp;output=embed"></iframe><p><a href="https://maps.app.goo.gl/9HkXDNEbUtawmLLp9?g_st=ac" target="_blank" rel="noopener noreferrer">Open our Google Maps listing</a></p><h3>Customer reviews</h3><p>Read current customer feedback directly on Google, or share your own experience after travelling with us.</p><p><a href="https://maps.app.goo.gl/9HkXDNEbUtawmLLp9?g_st=ac" target="_blank" rel="noopener noreferrer">View Google reviews / Write a review on Google</a></p></section>
 <section id="about" class="py-16 lg:py-22 bg-parchment-50">
@@ -2748,7 +2756,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
             <div class="py-5 border-b border-canopy-800 text-xs text-parchment-200/90 leading-relaxed">
                 <p>
-                    <strong class="text-amber-gold">Important Disclaimer:</strong> Rooted Journeys (<code>rootedjourneys.online</code>, Proprietor: Habiba Sheikh) is an independent <strong>private travel agency</strong> and is <strong>not affiliated with, endorsed by, or an official portal of the Rajasthan Forest Department or Government of Rajasthan</strong>. Official base charges (approx. ₹971 Indian Canter, ₹2,450 Foreigner Canter, ₹1,627 Indian Gypsy, ₹3,050 Foreigner Gypsy per seat) and our agency service fee are disclosed separately before payment. Applicable taxes, if any, will be disclosed before payment.
+                    <strong class="text-amber-gold">Important Disclaimer:</strong> Rooted Journeys (<code>rootedjourneys.online</code>, Proprietor: Habiba Sheikh) is an independent <strong>private travel agency</strong> and is <strong>not affiliated with, endorsed by, or an official portal of the Rajasthan Forest Department or Government of Rajasthan</strong>. Estimated third-party base charges (approx. ₹971 Indian Canter, ₹2,450 Foreigner Canter, ₹1,627 Indian Gypsy, ₹3,050 Foreigner Gypsy per seat) and our agency service fee are disclosed separately before payment. Applicable taxes, if any, will be disclosed before payment.
                 </p>
             </div>
 
@@ -2808,8 +2816,13 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
         safariDateInput.value = todayIso;
 
         function prefillSafari(typeValue) {
-            const selectEl = document.getElementById('safariType');
-            selectEl.value = typeValue;
+            jungleSafari.checked = true;
+            if (bookingQuota.value === 'Tatkal' && typeValue !== privateJeep) {
+                bookingQuota.value = 'Advance Booking';
+            }
+            syncTourForm();
+            if (safariTypeSelect.value === typeValue) return;
+            safariTypeSelect.value = typeValue;
             syncBookingCountOptions();
         }
 
@@ -2857,7 +2870,30 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
         // Quote Request Form
         const bookingForm = document.getElementById('safariBookingForm');
         const bookingFeedback = document.getElementById('bookingFeedback');
-        function syncTourForm(){const on=bookingForm.querySelector('[name=travelService][value="Jungle Safari"]').checked; const fields=document.getElementById('safariFields'); fields.hidden=!on; fields.querySelectorAll('select,input').forEach(x=>x.disabled=!on); const q=document.getElementById('bookingQuota').value; const t=document.getElementById('safariType'); const tat=q.includes('Tatkal'); [...t.options].forEach(o=>o.disabled=tat&&!o.value.includes('Gypsy Exclusive')); if(tat){t.value='Gypsy Exclusive (6-Seater Jeep)';syncBookingCountOptions();}} bookingForm.addEventListener('change',syncTourForm);syncTourForm();
+        const jungleSafari = bookingForm.querySelector('[name="travelService"][value="Jungle Safari"]');
+        const safariFields = document.getElementById('safariFields');
+        const bookingQuota = document.getElementById('bookingQuota');
+        const privateJeep = 'Gypsy Exclusive (6-Seater Jeep)';
+
+        function syncTourForm() {
+            safariFields.hidden = !jungleSafari.checked;
+            safariFields.querySelectorAll('select, input').forEach(field => {
+                field.disabled = !jungleSafari.checked;
+            });
+            const isTatkal = bookingQuota.value === 'Tatkal';
+            document.getElementById('tatkalFormPrice').hidden = !isTatkal;
+            for (const option of safariTypeSelect.options) {
+                option.disabled = isTatkal && option.value !== privateJeep;
+            }
+            if (isTatkal && safariTypeSelect.value !== privateJeep) {
+                safariTypeSelect.value = privateJeep;
+                syncBookingCountOptions();
+            }
+        }
+
+        jungleSafari.addEventListener('change', syncTourForm);
+        bookingQuota.addEventListener('change', syncTourForm);
+        syncTourForm();
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const quota = document.getElementById('bookingQuota').value.trim();
@@ -2879,6 +2915,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                 return;
             }
 
+            const visitorRate = document.getElementById('visitorRate');
             const isExclusive = safari.includes('Exclusive');
             const unitText = isExclusive
                 ? `${countVal} ${safari.includes('Gypsy') ? (countVal === 1 ? 'Exclusive Gypsy Jeep (6-Seater)' : 'Exclusive Gypsy Jeeps') : (countVal === 1 ? 'Exclusive Canter (20-Seater)' : 'Exclusive Canters')}`
@@ -2897,6 +2934,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                 ...(wantsSafari ? [`- Booking Quota: ${quota}`,
                 `- Date of Safari: ${date}`,
                 `- Safari Type: ${safari}`,
+                `- Visitor rate: ${visitorRate.selectedOptions[0].textContent}`,
                 `- Quantity: ${unitText}`,
                 `- Zone Preference: ${zone}`,
                 `- Shift: ${shift}`] : [])
@@ -2931,6 +2969,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
         const calcNationality = document.getElementById('calcNationality');
         const calcUnits = document.getElementById('calcUnits');
         const calcUnitsLabel = document.getElementById('calcUnitsLabel');
+        const calcPriceLabel = document.getElementById('calcPriceLabel');
         const calcTotal = document.getElementById('calcTotal');
         const calcSummaryText = document.getElementById('calcSummaryText');
         const calcWhatsAppBtn = document.getElementById('calcWhatsAppBtn');
@@ -2973,12 +3012,31 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                 ? `${units} ${option.startsWith('gypsy') ? (units === 1 ? 'Exclusive Gypsy' : 'Exclusive Gypsies') : (units === 1 ? 'Exclusive Canter' : 'Exclusive Canters')}`
                 : `${units} ${units === 1 ? 'Seat' : 'Seats'} (${item.label})`;
 
+            const isTatkal = quota === 'tatkal';
+            const priceLabel = isTatkal ? 'Standard Tatkal total' : 'Estimated total quote';
+            const priceTerms = isTatkal
+                ? 'Includes the assigned Jeep, driver and guide. Choosing a particular Jeep, guide or both costs extra. We quote selection fees before you decide.'
+                : 'Any applicable taxes will be confirmed before payment.';
+            calcPriceLabel.textContent = priceLabel;
             calcTotal.textContent = formattedTotal;
-            calcSummaryText.innerHTML = `${quantityDescriptor} (${quotaLabel}, ${natLabel}) = <strong>${formattedTotal}</strong> <span class="text-stone-700">(Includes approx. ${formattedBase} estimated third-party base costs + ${formattedFee} agency service fee • taxes, if applicable, confirmed before payment)</span>`;
+            calcSummaryText.textContent = `${quantityDescriptor} (${quotaLabel}, ${natLabel}): ${formattedBase} estimated third-party charges + ${formattedFee} agency fee. ${priceTerms}`;
 
-            const waText = `Hello Rooted Journeys, please confirm availability for ${quantityDescriptor} (${quotaLabel}, ${natLabel}, Est. Total ${formattedTotal}: approx. ${formattedBase} estimated third-party costs + ${formattedFee} agency service fee).`;
+            const waText = `Hello Rooted Journeys, please confirm availability for ${quantityDescriptor} (${quotaLabel}, ${natLabel}). ${priceLabel}: ${formattedTotal} (${formattedBase} estimated third-party charges + ${formattedFee} agency fee). ${isTatkal ? 'Please quote any optional vehicle or guide selection fee separately.' : 'Please confirm the full amount payable.'}`;
             calcWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
         }
+
+        document.getElementById('calcFormLink').addEventListener('click', () => {
+            const formTypes = {
+                gypsy_sharing: 'Gypsy Sharing (Per Seat)',
+                gypsy_exclusive: privateJeep,
+                canter_sharing: 'Canter Sharing (Per Seat)',
+                canter_exclusive: 'Canter Exclusive (20-Seater)'
+            };
+            bookingQuota.value = calcQuota.selectedOptions[0].textContent;
+            prefillSafari(formTypes[calcOption.value]);
+            safariCountSelect.value = calcUnits.value;
+            document.getElementById('visitorRate').value = calcNationality.value;
+        });
 
         calcOption.addEventListener('change', () => { syncCalculatorUnitOptions(); updateEstimator(); });
         calcQuota.addEventListener('change',()=>{const tat=calcQuota.value==='tatkal'; [...calcOption.options].forEach(o=>o.disabled=tat&&o.value!=='gypsy_exclusive');if(tat)calcOption.value='gypsy_exclusive';syncCalculatorUnitOptions();updateEstimator();});
