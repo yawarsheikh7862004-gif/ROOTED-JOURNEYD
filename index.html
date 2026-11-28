@@ -1908,7 +1908,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
     <!-- Hero Section + Safari Quote Request Form -->
     <section id="hero" class="relative overflow-hidden bg-canopy-950 text-white">
         <img fetchpriority="high" decoding="async" src="ranthambore-hero-v2-640.webp" srcset="ranthambore-hero-v2-480.webp 480w, ranthambore-hero-v2-640.webp 640w, ranthambore-hero-v2-800.webp 800w, ranthambore-hero-v2-1200.webp 1200w" sizes="100vw"
-             alt="Flamingos resting in a wetland"
+             alt="Royal Bengal tiger in woodland"
              class="absolute inset-0 w-full h-full object-cover object-center" referrerpolicy="no-referrer">
         <div class="hero-overlay absolute inset-0"></div>
 
@@ -2446,7 +2446,7 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
             <div id="zoneDetailCard" class="bg-white rounded-3xl border border-parchment-300 shadow-card p-6 sm:p-8 grid md:grid-cols-12 gap-6 items-center">
                 <div class="md:col-span-5 h-56 sm:h-64 rounded-2xl overflow-hidden bg-canopy-900">
-                    <img loading="lazy" decoding="async" id="zoneImage" title="Illustrative photograph; not a verified zone-specific location" src="zone-wildlife-1.webp" alt="Illustrative wildlife photograph" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                    <div id="zoneImage" hidden></div>
                 </div>
                 <div class="md:col-span-7 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
@@ -2594,16 +2594,16 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
                         <i class="fa-solid fa-expand text-amber-gold shrink-0"></i>
                     </div>
                 </button>
-<button type="button" data-category="fort"
-                        onclick="openLightbox('gallery-heritage.webp', 'Historic lakeside pavilion')"
+<button type="button" data-category="lakes"
+                        onclick="openLightbox('gallery-heritage.webp', 'Flamingos resting in a wetland')"
                         class="gallery-item group relative h-72 rounded-2xl overflow-hidden bg-canopy-900 border border-parchment-300 shadow-card text-left">
                     <img loading="lazy" decoding="async" src="gallery-heritage.webp"
-                         alt="Historic lakeside pavilion"
+                         alt="Flamingos resting in a wetland"
                          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-gradient-to-t from-canopy-950/90 via-canopy-950/10 to-transparent"></div>
-                    <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Heritage</span>
+                    <span class="absolute top-3 left-3 bg-amber-tiger text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Wetland Birds</span>
                     <div class="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between gap-2">
-                        <span class="text-sm font-bold leading-snug">Historic lakeside pavilion</span>
+                        <span class="text-sm font-bold leading-snug">Flamingos resting in a wetland</span>
                         <i class="fa-solid fa-expand text-amber-gold shrink-0"></i>
                     </div>
                 </button>
@@ -3036,16 +3036,16 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 
         // Zones Explorer
         const zonesData = {
-            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: 'zone-wildlife-1.webp' },
-            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: 'zone-wildlife-2.webp' },
-            3: { title: 'Zone 3 – Padam Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Padam Talao, Rajbagh Ruins, Jogi Mahal', wildlife: 'Royal Bengal Tiger, Sambar Deer, Marsh Crocodile, Peacocks', desc: 'Known for Padam Talao and the ruins of Rajbagh set against ancient stone walls.', img: 'zone-wildlife-3.webp' },
-            4: { title: 'Zone 4 – Malik Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Malik Talao, Lakkad Da, Berda', wildlife: 'Royal Bengal Tiger, Wild Boar, Langur, Jungle Fowl', desc: 'Known for waterholes, tall grasses, and varied woodland.', img: 'zone-wildlife-4.webp' },
-            5: { title: 'Zone 5 – Kachida Valley', group: 'Zone 1/2/3/4/5/6', spots: 'Kachida Valley, Dhok Forests, Bakula', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Chital', desc: 'Characterized by rocky outcrops, valleys, and dhok tree cover.', img: 'zone-wildlife-5.webp' },
-            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: 'zone-wildlife-6.webp' },
-            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: 'zone-wildlife-7.webp' },
-            8: { title: 'Zone 8 – Balas', group: 'Zone 7/8/9/10', spots: 'Balas, Aravalli Ridges, Dry Deciduous Forest', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Deer', desc: 'Marked by undulating hills and dry deciduous forest cover.', img: 'zone-wildlife-8.webp' },
-            9: { title: 'Zone 9 – Qualji', group: 'Zone 7/8/9/10', spots: 'Qualji, Banas River Corridor, Riverine Forest', wildlife: 'Royal Bengal Tiger, Striped Hyena, Indian Fox, Birds', desc: 'Stretches toward the Banas riverine belt with open terrain and ravines.', img: 'zone-wildlife-9.webp' },
-            10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: 'zone-wildlife-10.webp' }
+            1: { title: 'Zone 1 – Singhdwar', group: 'Zone 1/2/3/4/5/6', spots: 'Singhdwar, Guda, Rocky Aravalli Ridges', wildlife: 'Royal Bengal Tiger, Sloth Bear, Leopard, Sambar Deer', desc: 'Situated near Singhdwar, Zone 1 combines rugged hills, open clearings, and dense scrub forest.', img: '' },
+            2: { title: 'Zone 2 – Jogi Mahal', group: 'Zone 1/2/3/4/5/6', spots: 'Jogi Mahal, Malik Talao edge, Forest Gates', wildlife: 'Royal Bengal Tiger, Spotted Deer, Nilgai, Wetland Birds', desc: 'Zone 2 features dense forest cover, water edges near Malik Talao, and classic Ranthambore scenery.', img: '' },
+            3: { title: 'Zone 3 – Padam Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Padam Talao, Rajbagh Ruins, Jogi Mahal', wildlife: 'Royal Bengal Tiger, Sambar Deer, Marsh Crocodile, Peacocks', desc: 'Known for Padam Talao and the ruins of Rajbagh set against ancient stone walls.', img: '' },
+            4: { title: 'Zone 4 – Malik Talao', group: 'Zone 1/2/3/4/5/6', spots: 'Malik Talao, Lakkad Da, Berda', wildlife: 'Royal Bengal Tiger, Wild Boar, Langur, Jungle Fowl', desc: 'Known for waterholes, tall grasses, and varied woodland.', img: '' },
+            5: { title: 'Zone 5 – Kachida Valley', group: 'Zone 1/2/3/4/5/6', spots: 'Kachida Valley, Dhok Forests, Bakula', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Chital', desc: 'Characterized by rocky outcrops, valleys, and dhok tree cover.', img: '' },
+            6: { title: 'Zone 6 – Kundal', group: 'Zone 1/2/3/4/5/6', spots: 'Kundal, Large Meadows, Open Grasslands', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Eagles & Owls', desc: 'Offers open plains, grasslands, and water bodies in the southeastern stretch.', img: '' },
+            7: { title: 'Zone 7 – Chidikho', group: 'Zone 7/8/9/10', spots: 'Chidikho, Hill Slopes, Forest Tracks', wildlife: 'Royal Bengal Tiger, Hyena, Sambar Deer, Wild Pig', desc: 'A scenic hilly zone with winding forest roads and scrub jungle.', img: '' },
+            8: { title: 'Zone 8 – Balas', group: 'Zone 7/8/9/10', spots: 'Balas, Aravalli Ridges, Dry Deciduous Forest', wildlife: 'Royal Bengal Tiger, Leopard, Sloth Bear, Deer', desc: 'Marked by undulating hills and dry deciduous forest cover.', img: '' },
+            9: { title: 'Zone 9 – Qualji', group: 'Zone 7/8/9/10', spots: 'Qualji, Banas River Corridor, Riverine Forest', wildlife: 'Royal Bengal Tiger, Striped Hyena, Indian Fox, Birds', desc: 'Stretches toward the Banas riverine belt with open terrain and ravines.', img: '' },
+            10: { title: 'Zone 10 – Aantri / Kushalipura', group: 'Zone 7/8/9/10', spots: 'Aantri, Kushalipura, Waterholes & Scrub', wildlife: 'Royal Bengal Tiger, Nilgai, Jackal, Raptors', desc: 'Features scrub forest, seasonal pools, and open stretches in the eastern sector.', img: '' }
         };
 
         let activeZoneNumber = '1';
